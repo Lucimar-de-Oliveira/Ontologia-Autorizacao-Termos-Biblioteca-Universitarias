@@ -1,0 +1,3319 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/lucimar/ontologies/2025/11/untitled-ontology-54"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/lucimar/ontologies/2025/11/untitled-ontology-54">
+    <Prefix name="" IRI="http://www.semanticweb.org/lucimar/ontologies/2025/11/untitled-ontology-54/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="obo" IRI="http://purl.obolibrary.org/obo/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Import>http://purl.obolibrary.org/obo/bfo/2020/bfo-core.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Apresentação
+
+As classes desta ontologia foram concebidas e estruturadas com o objetivo de representar o processo de autorização de termos novos, de modo a apoiar os profissionais que desenvolvem essa atividade no contexto das bibliotecas universitárias. Trata-se de um processo que, na maioria das Políticas de Indexação ou de Representação Temática da Informação analisadas, não se encontra totalmente explícito, levando os profissionais a tomarem decisões e a realizarem inferências sobre o que precisa ser feito, como deve ser feito e quais fontes devem ser consultadas ao longo desse processo.
+A ontologia está sendo concebida com o intuito de mitigar essas dificuldades e tornar o processo de autorização de termos novos mais compreensível quanto ao caminho a ser seguido. Busca-se, assim, dar maior transparência ao processo, explicitando os atores envolvidos, a estrutura do termo, as fontes de informação utilizadas na autorização de termos, conforme citadas nas Políticas de Indexação das bibliotecas analisadas, bem como as notas necessárias para acompanhar e documentar o termo e as decisões tomadas.
+Para iniciar a elaboração das classes, adotou-se como referência a metodologia OntoForInfoScience. A partir dessa metodologia, realizou-se a análise das Políticas de Indexação e o levantamento de materiais bibliográficos relacionados à temática. Foram conduzidos levantamentos bibliográficos de artigos científicos nas bases de dados Brapci, SciELO, Scopus, Web of Science e Google Scholar. Sempre que eram identificados artigos pertinentes ao escopo da pesquisa, procedia-se também à verificação das referências utilizadas pelos autores, com o intuito de encontrar outros materiais relevantes para o desenvolvimento das classes. Em um desses artigos, identificou-se a referência à norma ANSI/NISO Z39.19-2005 (R2010): Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies.
+A partir da análise da norma ANSI/NISO Z39.19, foi-se observando sua adequação ao escopo do estudo e a contribuição que esta poderia trazer para a estruturação de termos em vocabulários controlados. Percebeu-se que a norma poderia servir de base para diversas classes da ontologia, como a estrutura de um termo, os tipos de notas, bem como os critérios levados em consideração para que um termo novo seja, de fato, autorizado. Observou-se ainda que a norma apresenta subsídios que permitem vislumbrar uma possível proposta de desenvolvimento de um formulário para solicitação de inclusão de termos novos.
+No que se refere às normas internacionais, as normas ISO, desde a ISO 2788 até a ISO 25964 – the international standard for thesauri and interoperability with other vocabularies,  não foram consideradas para a composição das classes da ontologia. Devido ao fato de estarem mais voltadas à interoperabilidade e à modelagem de dados, esse enfoque não corresponde ao objetivo desta pesquisa neste momento. Dessa forma, optou-se, em comum acordo com as orientações, por estruturar  a maioria das classes com base nas Políticas de Indexação de bibliotecas universitárias e na norma ANSI/NISO Z39.19.
+No decorrer do desenvolvimento da ontologia, observou-se, a partir das políticas analisadas e da norma ANSI/NISO, que a estrutura do termo novo difere entre as bibliotecas. Diante disso, verificou-se que a por meio da ontologia pode ser proposto uma estrutura de termo baseada na norma ANSI/NISO Z39.19-2005 (R2010), sem caráter prescritivo, funcionando como referência conceitual para apoiar o processo de autorização de termos novos.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <Literal>Ontologia de apoio à ao processo de indexação com foco na autorização de termos novos no contexto de bibliotecas universitárias</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000015"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000040"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BaseDeAutoridades"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FormularioDeSolicitacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LiteraturaCientifica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NotaDeContexto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ResultadosDeSolicitação"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SolicitacaoCompleta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VocabularioControlado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Agrovoc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/BibliotecaCentral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/BibliotecaSetorial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/BibliotecaUniversitaria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CampusUniversitario"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CatalogoDeAutoridadesBibliotecaNacional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CatalogoDeMedicalSubjectHeadings"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CatalogoLinguagemUNESP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CatalogoVocabularioUSP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CatalogosDeAutoridadeDeTermos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CriteriosDeAutorizacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DeCSMeSH"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Documento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DocumentoCatalogado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/EstruturaDoTermo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/FontesDeInformação"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Formulario"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/FormularioDeSolicitacaoDeInclusaoDeTermoNovo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Instrumentos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/JustificativaDoUsuario"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/LibraryOfCongressSubjectHeadings"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NALTVocabularies"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NormaANSINISO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NotaDeEscopo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NotaDeHistorico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NotaJustificativaLiteraria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NotaJustificativaOrganizacional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Notas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/PoliticaDeIndexação"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ProcessoDeAutorizacaoDeTermoNovo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ProcessoDeIndexação"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/QuaseSinonimos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ReferenciasCruzadas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/RelacoesAssociativas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/RelacoesDeEquivalencia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/RelacoesHierarquicas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/RelacoesSemanticas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Remissivas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Sinonimos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/SistemaDeBibliotecas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/SolicitaçãoDeInclusãoDeTermo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TerminologiaEmPsicologia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Termo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TermoAutorizado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TermoComPendencia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TermoEmLinguaEstrangeira"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TermoEspecifico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TermoGeral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TermoNaoAutorizado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TermoNovo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TermoRelacionado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Tesamat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TesauroBrasileiroEmCienciaDaInformacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TesauroDeCienciasSociaisAplicadas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TesauroDeGeneroESobreMulheres"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TesauroDoIbama"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TesauroEric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TesauroSobreLiteratura"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Tesauros"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TesaurosDeCienciasDaSaude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TesaurosDeCienciasExataseEngenharias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TesaurosDeCienciasHumanas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TesaurosMuldisciplinares"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TesaurosdeCienciasDaTerraEAgrariasEMeioAmbiente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ThesBio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Thesagro"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ThesaurusBrasileiroDeEducacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TransportationResearchThesaurus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/UnescoThesaurus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/VariantesLexicais"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aplicaCriterio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#apoiaEstruturacaoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#baseadaEm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#baseadaEmNorma"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consultaFontesDeInformacao"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eCampoDeFormulario"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fazParteDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fundamentaPropostaDeEstrutura"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#iniciadaPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#possuiElementoEstrutural"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#serveDeBasePara"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temComoBase"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temDataDeEntrada"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temTermoNovo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#utilizaInstrumentos"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Devolve"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Propoe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Rejeita"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Representa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/adequadoPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/contem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/documenta"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/documentaSolicitacao"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/eAnalisadoEm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/eEncaminhadoPara"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/ePropostoPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/fazParteDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/inicia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/possuiCampo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/refereSeA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/refereSeAo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/registraSolicitacaoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/resultaEm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/solicitaAdequacaoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/solicitaInclusaoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/temAssunto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DataDeSolicitação"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#temDataDeAutorizacao"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#temDataDeSolicitacao"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/Propoe"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/temEmail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/temPendenciaDetectadaPor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Bibliotecario"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Catalogador"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/ComissaoDeCatalogacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/ComissaoDePreparoTecnico"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/ComiteDeControleDeVocabulário"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/CoordenacaoTecnica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/CoordenadorTécnico"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/EquipeDeCatalogacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/GTdeIndexacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/GestorDaInformacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/GrupoDeEstudoDeAutoridade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/GrupoDeLinguagem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/GrupoDeTrabalhoDeIndexacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/GrupoDeTrabalhoEmTerminologia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Indexador"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/SecaoDePreparoTecnico"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/SecaoDeProcessoTecnico"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/SecaoDeRepresentacaoDaInformacao"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#BaseDeAutoridades"/>
+        <Class IRI="/FontesDeInformação"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FormularioDeSolicitacao"/>
+        <Class IRI="/Instrumentos"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LiteraturaCientifica"/>
+        <Class IRI="/FontesDeInformação"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NotaDeContexto"/>
+        <Class IRI="/Notas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResultadosDeSolicitação"/>
+        <Class abbreviatedIRI="obo:BFO_0000141"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolicitacaoCompleta"/>
+        <Class IRI="/SolicitaçãoDeInclusãoDeTermo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VocabularioControlado"/>
+        <Class IRI="/FontesDeInformação"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Agrovoc"/>
+        <Class IRI="/TesaurosdeCienciasDaTerraEAgrariasEMeioAmbiente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/BibliotecaCentral"/>
+        <Class IRI="/BibliotecaUniversitaria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/BibliotecaSetorial"/>
+        <Class IRI="/SistemaDeBibliotecas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/BibliotecaUniversitaria"/>
+        <Class abbreviatedIRI="obo:BFO_0000027"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CampusUniversitario"/>
+        <Class abbreviatedIRI="obo:BFO_0000027"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CatalogoDeAutoridadesBibliotecaNacional"/>
+        <Class IRI="/CatalogosDeAutoridadeDeTermos"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CatalogoDeMedicalSubjectHeadings"/>
+        <Class IRI="/CatalogosDeAutoridadeDeTermos"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CatalogoLinguagemUNESP"/>
+        <Class IRI="/CatalogosDeAutoridadeDeTermos"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CatalogoVocabularioUSP"/>
+        <Class IRI="/CatalogosDeAutoridadeDeTermos"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CatalogosDeAutoridadeDeTermos"/>
+        <Class IRI="#BaseDeAutoridades"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CatalogosDeAutoridadeDeTermos"/>
+        <Class IRI="/FontesDeInformação"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CriteriosDeAutorizacao"/>
+        <Class abbreviatedIRI="obo:BFO_0000141"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DeCSMeSH"/>
+        <Class IRI="/TesaurosDeCienciasDaSaude"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Documento"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DocumentoCatalogado"/>
+        <Class IRI="/Documento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/EstruturaDoTermo"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/EstruturaDoTermo"/>
+        <Class IRI="/TermoNovo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FontesDeInformação"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Formulario"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FormularioDeSolicitacaoDeInclusaoDeTermoNovo"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FormularioDeSolicitacaoDeInclusaoDeTermoNovo"/>
+        <Class IRI="/Documento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FormularioDeSolicitacaoDeInclusaoDeTermoNovo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/documenta"/>
+            <Class IRI="/SolicitaçãoDeInclusãoDeTermo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Instrumentos"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/JustificativaDoUsuario"/>
+        <Class IRI="/Notas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/LibraryOfCongressSubjectHeadings"/>
+        <Class IRI="/CatalogosDeAutoridadeDeTermos"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NALTVocabularies"/>
+        <Class IRI="/TesaurosdeCienciasDaTerraEAgrariasEMeioAmbiente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NormaANSINISO"/>
+        <Class IRI="/Instrumentos"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NotaDeEscopo"/>
+        <Class IRI="/Notas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NotaDeHistorico"/>
+        <Class IRI="/Notas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NotaJustificativaLiteraria"/>
+        <Class IRI="/Notas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NotaJustificativaOrganizacional"/>
+        <Class IRI="/Notas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Notas"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/PoliticaDeIndexação"/>
+        <Class IRI="/Instrumentos"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ProcessoDeAutorizacaoDeTermoNovo"/>
+        <Class abbreviatedIRI="obo:BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ProcessoDeAutorizacaoDeTermoNovo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:BFO_0000117"/>
+            <Class IRI="/SolicitaçãoDeInclusãoDeTermo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ProcessoDeIndexação"/>
+        <Class abbreviatedIRI="obo:BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/QuaseSinonimos"/>
+        <Class IRI="/RelacoesDeEquivalencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReferenciasCruzadas"/>
+        <Class IRI="/RelacoesDeEquivalencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/RelacoesAssociativas"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/RelacoesAssociativas"/>
+        <Class IRI="/EstruturaDoTermo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/RelacoesDeEquivalencia"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/RelacoesDeEquivalencia"/>
+        <Class IRI="/EstruturaDoTermo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/RelacoesHierarquicas"/>
+        <Class IRI="/EstruturaDoTermo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/RelacoesSemanticas"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/RelacoesSemanticas"/>
+        <Class IRI="/EstruturaDoTermo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Remissivas"/>
+        <Class IRI="/RelacoesDeEquivalencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Sinonimos"/>
+        <Class IRI="/RelacoesDeEquivalencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SistemaDeBibliotecas"/>
+        <Class abbreviatedIRI="obo:BFO_0000027"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SolicitaçãoDeInclusãoDeTermo"/>
+        <Class abbreviatedIRI="obo:BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SolicitaçãoDeInclusãoDeTermo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#tem"/>
+            <Class IRI="/TermoNovo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TerminologiaEmPsicologia"/>
+        <Class IRI="/TesaurosDeCienciasDaSaude"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Termo"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Termo"/>
+        <Class IRI="/Termo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TermoAutorizado"/>
+        <Class IRI="#ResultadosDeSolicitação"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TermoComPendencia"/>
+        <Class IRI="#ResultadosDeSolicitação"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TermoEmLinguaEstrangeira"/>
+        <Class IRI="/RelacoesDeEquivalencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TermoEspecifico"/>
+        <Class IRI="/RelacoesHierarquicas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TermoGeral"/>
+        <Class IRI="/RelacoesHierarquicas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TermoNaoAutorizado"/>
+        <Class IRI="#ResultadosDeSolicitação"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TermoNovo"/>
+        <Class abbreviatedIRI="obo:BFO_0000141"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TermoRelacionado"/>
+        <Class IRI="/RelacoesAssociativas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Tesamat"/>
+        <Class IRI="/TesaurosDeCienciasExataseEngenharias"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TesauroBrasileiroEmCienciaDaInformacao"/>
+        <Class IRI="/TesauroDeCienciasSociaisAplicadas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TesauroDeCienciasSociaisAplicadas"/>
+        <Class IRI="/Tesauros"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TesauroDeGeneroESobreMulheres"/>
+        <Class IRI="/TesaurosDeCienciasHumanas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TesauroDoIbama"/>
+        <Class IRI="/TesaurosdeCienciasDaTerraEAgrariasEMeioAmbiente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TesauroEric"/>
+        <Class IRI="/TesaurosDeCienciasHumanas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TesauroSobreLiteratura"/>
+        <Class IRI="/TesaurosDeCienciasHumanas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Tesauros"/>
+        <Class IRI="/FontesDeInformação"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TesaurosDeCienciasDaSaude"/>
+        <Class IRI="/Tesauros"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TesaurosDeCienciasExataseEngenharias"/>
+        <Class IRI="/Tesauros"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TesaurosDeCienciasHumanas"/>
+        <Class IRI="/Tesauros"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TesaurosMuldisciplinares"/>
+        <Class IRI="/Tesauros"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TesaurosdeCienciasDaTerraEAgrariasEMeioAmbiente"/>
+        <Class IRI="/Tesauros"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ThesBio"/>
+        <Class IRI="/TesaurosdeCienciasDaTerraEAgrariasEMeioAmbiente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Thesagro"/>
+        <Class IRI="/TesaurosdeCienciasDaTerraEAgrariasEMeioAmbiente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ThesaurusBrasileiroDeEducacao"/>
+        <Class IRI="/TesaurosDeCienciasHumanas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TransportationResearchThesaurus"/>
+        <Class IRI="/TesaurosDeCienciasExataseEngenharias"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/UnescoThesaurus"/>
+        <Class IRI="/TesaurosMuldisciplinares"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/VariantesLexicais"/>
+        <Class IRI="/RelacoesDeEquivalencia"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/Rejeita"/>
+        <ObjectProperty IRI="/Devolve"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/Representa"/>
+        <ObjectProperty IRI="/Rejeita"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/ePropostoPor"/>
+        <ObjectProperty IRI="/inicia"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#baseadaEm"/>
+        <ObjectProperty IRI="#fundamentaPropostaDeEstrutura"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#serveDeBasePara"/>
+        <ObjectProperty IRI="#temComoBase"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aplicaCriterio"/>
+        <Class IRI="/ProcessoDeAutorizacaoDeTermoNovo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#apoiaEstruturacaoDe"/>
+        <Class IRI="/EstruturaDoTermo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#baseadaEmNorma"/>
+        <Class IRI="/EstruturaDoTermo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consultaFontesDeInformacao"/>
+        <Class IRI="/ProcessoDeAutorizacaoDeTermoNovo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fazParteDe"/>
+        <Class IRI="/SolicitaçãoDeInclusãoDeTermo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#iniciadaPor"/>
+        <Class IRI="/SolicitaçãoDeInclusãoDeTermo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possuiElementoEstrutural"/>
+        <Class IRI="/EstruturaDoTermo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#temComoBase"/>
+        <Class IRI="/EstruturaDoTermo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#temDataDeEntrada"/>
+        <Class IRI="/TermoNovo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#temTermoNovo"/>
+        <Class IRI="/ProcessoDeAutorizacaoDeTermoNovo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#utilizaInstrumentos"/>
+        <Class IRI="/ProcessoDeAutorizacaoDeTermoNovo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/adequadoPor"/>
+        <Class IRI="/TermoComPendencia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/contem"/>
+        <Class IRI="/FormularioDeSolicitacaoDeInclusaoDeTermoNovo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/documenta"/>
+        <Class IRI="/FormularioDeSolicitacaoDeInclusaoDeTermoNovo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/eAnalisadoEm"/>
+        <Class IRI="/Documento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/eEncaminhadoPara"/>
+        <Class IRI="/FormularioDeSolicitacaoDeInclusaoDeTermoNovo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/ePropostoPor"/>
+        <Class IRI="/TermoNovo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/possuiCampo"/>
+        <Class IRI="/FormularioDeSolicitacaoDeInclusaoDeTermoNovo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/registraSolicitacaoDe"/>
+        <Class IRI="/FormularioDeSolicitacaoDeInclusaoDeTermoNovo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/resultaEm"/>
+        <Class IRI="/ProcessoDeIndexação"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/temAssunto"/>
+        <Class IRI="/DocumentoCatalogado"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aplicaCriterio"/>
+        <Class IRI="/CriteriosDeAutorizacao"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#apoiaEstruturacaoDe"/>
+        <Class IRI="/TermoNovo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#baseadaEmNorma"/>
+        <Class IRI="/Instrumentos"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#consultaFontesDeInformacao"/>
+        <Class IRI="/FontesDeInformação"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#eCampoDeFormulario"/>
+        <Class IRI="/FormularioDeSolicitacaoDeInclusaoDeTermoNovo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fazParteDe"/>
+        <Class IRI="/ProcessoDeAutorizacaoDeTermoNovo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#possuiElementoEstrutural"/>
+        <Class IRI="/EstruturaDoTermo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#serveDeBasePara"/>
+        <Class IRI="/EstruturaDoTermo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#temDataDeEntrada"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#temTermoNovo"/>
+        <Class IRI="/TermoNovo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#utilizaInstrumentos"/>
+        <Class IRI="/Instrumentos"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/Propoe"/>
+        <Class IRI="/TermoNovo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/documenta"/>
+        <Class IRI="/SolicitaçãoDeInclusãoDeTermo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/documentaSolicitacao"/>
+        <Class IRI="/SolicitaçãoDeInclusãoDeTermo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/eAnalisadoEm"/>
+        <Class IRI="/ProcessoDeIndexação"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/fazParteDe"/>
+        <Class IRI="/FormularioDeSolicitacaoDeInclusaoDeTermoNovo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/inicia"/>
+        <Class IRI="/ProcessoDeAutorizacaoDeTermoNovo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/refereSeAo"/>
+        <Class IRI="/TermoNovo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/registraSolicitacaoDe"/>
+        <Class IRI="/TermoNovo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/resultaEm"/>
+        <Class IRI="/TermoAutorizado"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/solicitaInclusaoDe"/>
+        <Class IRI="/TermoNovo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/temAssunto"/>
+        <Class IRI="/Termo"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#temDataDeAutorizacao"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#temDataDeSolicitacao"/>
+        <Class IRI="/TermoAutorizado"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#DataDeSolicitação"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#temDataDeSolicitacao"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/temEmail"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DataDeSolicitação</IRI>
+        <Literal>A propriedade utiliza o tipo xsd:dateTime por limitação/compatibilidade do ambiente de modelagem. Para fins operacionais, considera-se relevante apenas a data; quando o horário não for informado, recomenda-se registrar o valor com hora padrão 00:00:00.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#baseadaEm</IRI>
+        <Literal>Esta relação expressa uma proposta de fundamentação conceitual, não implicando a adoção obrigatória da norma pelas bibliotecas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#baseadaEm</IRI>
+        <Literal>Relação que indica que uma proposta de estrutura conceitual é fundamentada em uma norma técnica utilizada como referência para sua elaboração no contexto da autorização de termos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fundamentaPropostaDeEstrutura</IRI>
+        <Literal>Indica que a norma serve como base conceitual para a elaboração da proposta de estrutura do termo, sendo utilizada como referência, sem caráter obrigatório para as bibliotecas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#serveDeBasePara</IRI>
+        <Literal>Esta relação indica que uma proposta de estrutura pode servir como base conceitual para a construção da estrutura do termo, sem implicar adoção obrigatória dessa proposta pelas bibliotecas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#temComoBase</IRI>
+        <Literal>Esta relação indica que a estrutura do termo pode ser fundamentada em uma proposta conceitual, sem caráter prescritivo ou obrigatório.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Agrovoc</IRI>
+        <Literal>Tesauro da FAO na área de agricultura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Agrovoc</IRI>
+        <Literal>FOOD AND AGRICULTURE ORGANIZATION OF THE UNITED NATIONS (FAO). AGROVOC: multilingual controlled vocabulary. Rome: FAO.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Agrovoc</IRI>
+        <Literal>https://agrovoc.fao.org/search</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Agrovoc</IRI>
+        <Literal xml:lang="en">AGROVOC é um vocabulário controlado e multilíngue, coordenado pela FAO desde o início da década de 1980, desenvolvido para classificar dados de forma homogênea e facilitar a interoperabilidade, a reutilização e o acesso à informação nas áreas de interesse da organização. Trata-se de um conjunto de dados em Linked Open Data, de acesso público, que promove a visibilidade e a integração de dados entre diferentes domínios e idiomas, especialmente no campo da agricultura.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Agrovoc</IRI>
+        <Literal>AGROVOC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/BibliotecaCentral</IRI>
+        <Literal>A definição apra Biblioteca Central foi inferido a aprtir da vivência da autora e na seguinte fonte:
+FAQUETI, Marouva Fallgatter; DUTRA, Sigrid Weiss; ALVES, João Bosco da Mota; ROVER, Aires José. Sistemas de bibliotecas: uma análise a partir de seus regimentos. RDBCI: Revista Digital de Biblioteconomia e Ciência da Informação, Campinas, SP, v. 15, n. 3, p. 715–735, 2017.
+https://periodicos.sbu.unicamp.br/ojs/index.php/rdbci/article/view/8646300.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/BibliotecaCentral</IRI>
+        <Literal>A Biblioteca Central, inserida em uma universidade, pode contar com bibliotecas setoriais vinculadas a setores específicos da instituição. É denominada Biblioteca Central por concentrar a maior parte do acervo e dos serviços, atendendo de forma abrangente aos diversos setores e áreas do conhecimento da universidade.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/BibliotecaCentral</IRI>
+        <Literal>Biblioteca Central</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/BibliotecaSetorial</IRI>
+        <Literal>Biblioteca setorial é a unidade que compõe um Sistema de Bibliotecas, podendo estar inserida em diferentes campi de uma universidade e vinculada a áreas, cursos ou setores acadêmicos específicos. Um sistema de Bibliotecas pode incluir várias bibliotecas setoriais.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/BibliotecaSetorial</IRI>
+        <Literal>Bibliotecas setoriais da Universidade Federal do Paraná (UFPR)
+Biblioteca de Ciências Agrárias, inserida no Setor de Ciências Agrárias
+Biblioteca de Ciências Sociais Aplicadas, inserida no Setor de Ciências Sociais Aplicadas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/BibliotecaSetorial</IRI>
+        <Literal>Biblioteca setorial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/BibliotecaUniversitaria</IRI>
+        <Literal>NUNES, Martha Suzana Cabral; CARVALHO, Kátia de. As bibliotecas universitárias em perspectiva histórica: a caminho do desenvolvimento durável. Perspectivas em Ciência da Informação, Belo Horizonte, v. 21, n. 1, p. 173–193, jan./mar. 2016.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/BibliotecaUniversitaria</IRI>
+        <Literal>https://www.scielo.br/j/pci/a/LCcVhWXmMt6ydMmG6Gmmmzw/?format=pdf&amp;lang=pt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/BibliotecaUniversitaria</IRI>
+        <Literal>As bibliotecas universitárias são instituições de ensino superior e estão voltadas para atender as necessidades de todos os membros da comunidade acadêmica da qual fazem parte, mas num processo dinâmico, onde cada uma de suas atividades não é desenvolvida de maneira estática e mecânica, mas com o intuito de agir interativamente para ampliar o acesso à informação e contribuir para a missão da universidade. Nunes e Carvalho (2016, p.179).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/BibliotecaUniversitaria</IRI>
+        <Literal>Biblioteca Universitária</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CampusUniversitario</IRI>
+        <Literal>Definição elaborada a partir de: 
+https://querobolsa.com.br/ufpr-universidade-federal-do-parana/campus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/CampusUniversitario</IRI>
+        <Literal>Campus universitário: unidade territorial e administrativa de uma universidade que reúne infraestrutura acadêmica, científica, cultural e de serviços, como bibliotecas, laboratórios, centros de pesquisa, hospitais universitários e espaços de ensino, podendo estar localizada na sede institucional ou em outras cidades.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/CampusUniversitario</IRI>
+        <Literal>Campus Universitário</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CatalogoDeAutoridadesBibliotecaNacional</IRI>
+        <Literal>BIBLIOTECA NACIONAL (Brasil). Catálogo de autoridades da Biblioteca Nacional. Rio de Janeiro: Fundação Biblioteca Nacional, [20--]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CatalogoDeAutoridadesBibliotecaNacional</IRI>
+        <Literal>https://acervo.bn.gov.br/Sophia_web/Autoridade?guid=1765748817215</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/CatalogoDeAutoridadesBibliotecaNacional</IRI>
+        <Literal>Catálogo online formado por nomes de pessoas, entidades coletivas, eventos associados à autoria de obras e assuntos. É a mais completa lista de autores brasileiros, referência para a catalogação de obras na Biblioteca Nacional e consultada por profissionais de diversas instituições. Os assuntos são apresentados em lista multidisciplinar estruturada em forma de tesauro. Para cada assunto são apresentados os termos gerais (TG), os termos específicos (TE) e os termos relacionados (TR). Engloba tópicos, remissivas ver, remissivas ver também, além das subdivisões gerais, cronológicas e geográficas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/CatalogoDeAutoridadesBibliotecaNacional</IRI>
+        <Literal>Catalogo de Autoridades BN (Biblioteca Nacional)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/CatalogoDeAutoridadesBibliotecaNacional</IRI>
+        <Literal>Catálogo de autoridades de termos autorizados utilizado pelas bibliotecas universitárias brasileiras para verificar e importar termos já autorizados, bem como base para a autorização de novos termos, conforme os critérios adotados nas políticas de indexação.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CatalogoDeMedicalSubjectHeadings</IRI>
+        <Literal>https://meshb.nlm.nih.gov/?_gl=1*clnziv*_ga*NTkyODIzMTQ1LjE3NjU1NTkwNTk.*_ga_7147EPK006*czE3NjU3NjY1NDAkbzEkZzEkdDE3NjU3Njc2OTQkajU4JGwwJGgw*_ga_P1FPTH9PL4*czE3NjU3NjY1NDAkbzEkZzEkdDE3NjU3Njc2OTQkajU4JGwwJGgw</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/CatalogoDeMedicalSubjectHeadings</IRI>
+        <Literal xml:lang="en">O tesauro Medical Subject Headings (MeSH) é um vocabulário controlado e hierarquicamente organizado produzido pela Biblioteca Nacional de Medicina. É usado para indexação, catalogação e pesquisa de informações biomédicas e relacionadas à saúde. O MeSH inclui os títulos de assunto que aparecem no MEDLINE/PubMed, no Biblioteca Nacional de Medicina (NLM) Catalog e em outros bancos de dados do NLM.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/CatalogoDeMedicalSubjectHeadings</IRI>
+        <Literal>Exemplo de um termo autorizado:
+
+Cabeçalho MeSH: Síndrome da Imunodeficiência Adquirida
+Identificador único RDF
+http://id.nlm.nih.gov/mesh/D000163
+
+Anotação: causado pelo HIV ; coordene IM com HIV-1 ou HIV-2 (IM) se pertinente; /‌epidemiologia : considere também SOROPREVALÊNCIA DO HIV ; INFECÇÕES OPORTUNISTAS RELACIONADAS À AIDS está disponível se discutido especificamente: veja a nota lá; para linfoma com AIDS , use LINFOMA, RELACIONADO À AIDS
+
+Nota sobre o escopo: Uma deficiência adquirida da imunidade celular associada à infecção pelo vírus da imunodeficiência humana ( HIV ), uma contagem de linfócitos T CD4+ inferior a 200 células/microlitro ou menos de 14% do total de linfócitos, e maior suscetibilidade a infecções oportunistas e neoplasias malignas. As manifestações clínicas também incluem emagrecimento e demência. Esses elementos refletem os critérios para AIDS definidos pelo CDC em 1993.
+
+Versão de entrada: SÍNDROME DA IMUNODÉFICA ADQUIRIDA
+
+Período(s) de entrada: AIDS
+Síndrome da Imunodeficiência Adquirida
+Síndrome da Imunodeficiência Adquirida
+Síndrome da Imunodeficiência Adquirida
+Síndrome de Imunodeficiência Adquirida
+
+Indexação anterior: Síndromes de Imunodeficiência (1979-1982)
+
+Veja também: Arterite associada à AIDS, Sistema Nervoso Central
+Complexo de Demência e AIDS
+Sorodiagnóstico da AIDS
+Soropositividade para HIV
+Soroprevalência do HIV
+Linfoma relacionado à AIDS
+Nota pública MeSH: 83
+Nota histórica: 83
+Data de fundação: 01/01/1983
+Data de entrada: 18/03/1983
+Data da revisão: 30/06/2021</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/CatalogoDeMedicalSubjectHeadings</IRI>
+        <Literal xml:lang="en">National Library of Medicine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/CatalogoDeMedicalSubjectHeadings</IRI>
+        <Literal>Catálogo de termos da Biblioteca Nacional de Medicina dos Estados Unidos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CatalogoLinguagemUNESP</IRI>
+        <Literal>Universidade Estadual Paulista &quot;Júlio de Mesquita Filho&quot;. Tesauro UNESP. São Paulo, [2012].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CatalogoLinguagemUNESP</IRI>
+        <Literal>https://www.biblioteca.unesp.br/tesauro/vocab/index.php</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/CatalogoLinguagemUNESP</IRI>
+        <Literal>A Linguagem UNESP, é uma Linguagem multidisciplinar, fundamentada na Library of Congress Subject Headings (LCSH), que incorpora termos novos e modifica os termos importados da Lista de Cabeçalhos de Assuntos da Rede BIBLIODATA (LCARB), com consulta às linguagens da Biblioteca Nacional, LCSH e Medical Subject Headings (MeSH). Atualmente está em processo constante de atualização, hierarquização de termos relacionados e padronização de notas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/CatalogoLinguagemUNESP</IRI>
+        <Literal>Catálogo Linguagem Unesp (Universidade Estadual de São Paulo &quot;Júlio de Mesquita Filho&quot;)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CatalogoVocabularioUSP</IRI>
+        <Literal>https://vocabusp.abcd.usp.br/Vocab/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/CatalogoVocabularioUSP</IRI>
+        <Literal>O Vocabulário Controlado da USP é utilizado para a indexação de recursos de informação no Banco de Dados Bibliográficos DEDALUS e abrange as áreas de ensino, pesquisa e extensão da Universidade de São Paulo. É composto por termos autorizados, termos não autorizados como remissivas e elos falsos para agrupamento conceitual. Devido à sua abrangência temática, pode ser aplicado à representação de documentos em diferentes sistemas de informação, sendo especialmente adequado a bases bibliográficas de instituições de ensino superior. O vocabulário pode ser consultado por macroestrutura, lista alfabética e lista sistemática, sendo complementado por tabelas de qualificadores, locais, gênero e forma, profissões e ocupações.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/CatalogoVocabularioUSP</IRI>
+        <Literal>UNIVERSIDADE DE SÃO PAULO. Agência de Bibliotecas e Coleções Digitais. Vocabulário Controlado da USP. São Paulo, [s.d.]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/CatalogoVocabularioUSP</IRI>
+        <Literal>Vocabulário Controlado da USP (Universidade de São Paulo)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CatalogosDeAutoridadeDeTermos</IRI>
+        <Literal>Definição baseada em: Catálogo online formado por nomes de pessoas, entidades coletivas, eventos associados à autoria de obras e assuntos. É a mais completa lista de autores brasileiros, referência para a catalogação de obras na Biblioteca Nacional e consultada por profissionais de diversas instituições. Os assuntos são apresentados em lista multidisciplinar estruturada em forma de tesauro. Para cada assunto são apresentados os termos gerais (TG), os termos específicos (TE) e os termos relacionados (TR). Engloba tópicos, remissivas ver, remissivas ver também, além das subdivisões gerais, cronológicas e geográficas. Biblioteca Nacional (BN)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CatalogosDeAutoridadeDeTermos</IRI>
+        <Literal>BIBLIOTECA NACIONAL (Brasil). Catálogo de autoridades da Biblioteca Nacional. Rio de Janeiro: Fundação Biblioteca Nacional, [20--] .</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CatalogosDeAutoridadeDeTermos</IRI>
+        <Literal>https://antigo.bn.gov.br/explore/catalogos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/CatalogosDeAutoridadeDeTermos</IRI>
+        <Literal>São catálogos online disponibilizados por instituições, geralmente compostos por das seguintes autoridades: nomes de pessoas, entidades coletivas, eventos associados à autoria de obras e termos (assuntos). Os assuntos são apresentados em lista multidisciplinar estruturada em forma de tesauro. Para cada assunto são apresentados os termos gerais (TG), os termos específicos (TE) e os termos relacionados (TR). Engloba tópicos, remissivas ver, remissivas ver também, além das subdivisões gerais, cronológicas e geográficas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/CatalogosDeAutoridadeDeTermos</IRI>
+        <Literal>Catálogo de Autoridades Biblioteca Nacional (BN)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/CatalogosDeAutoridadeDeTermos</IRI>
+        <Literal>Catálogos de Autoridades de Termos ou Assuntos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>As políticas de indexação analisadas não explicitam critérios formais para a autorização de termos novos. No entanto, a análise das políticas que apresentam o processo de autorização de termos de forma mais estruturada indica que parte dos elementos considerados na avaliação do termo pode ser inferida tanto a partir dos campos dos formulários de solicitação, quando existentes, quanto dos tópicos e orientações descritos nos próprios documentos. Nesse contexto, os tópicos mais recorrentes observados na análise das políticas de indexação foram:
+a ocorrência do termo em fontes confiáveis e reconhecidas da área de conhecimento;
+
+- pertinência do termo à área temática atendida pela biblioteca ou sistema de bibliotecas;
+- verificação da existência de conceito já autorizado ao qual o termo proposto possa ser relacionado ou incorporado;
+- escolha da forma mais adequada do termo, considerando normas, políticas institucionais e o uso consagrado na literatura;
+- compatibilidade do termo com os vocabulários controlados adotados (tesauros, listas de assuntos e catálogos de autoridade);
+- adequação conceitual do termo em relação ao significado que se pretende representar.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>https://biblioteca.ufam.edu.br/images/doc/politica_indexacao_revistaRM.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>https://biblioteca.ufc.br/pt/normas-sibi/politica-de-indexacao-do-sistema-de-bibliotecas-da-ufc/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>https://biblioteca.unesp.br/portal/arquivos/manual-de-politica-de-indexacao.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>https://bibliotecas.ufpr.br/wp-content/uploads/2022/04/Politicas-de-Representacao-Tematica-SiBi.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>https://files.cercomp.ufg.br/weby/up/88/o/Manual_Politica_SIBi_UFG.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>https://www.sibi.ufscar.br/arquivos/manual_indexacao_2021.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>Na avaliação de um termo novo, considera-se sua ocorrência em fontes confiáveis da área, como literatura especializada ou vocabulários adotados, ainda que esse procedimento não esteja formalmente definido como critério na política de indexação.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>Parâmetros de autorização de termo novo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>Requisitos de análise do termo novo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>Na avaliação de um termo novo, considera-se sua ocorrência em fontes confiáveis da área, como literatura especializada ou vocabulários adotados, ainda que esse procedimento não esteja formalmente definido como critério na política de indexação.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/CriteriosDeAutorizacao</IRI>
+        <Literal>Critérios para Autorização de Termos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/DeCSMeSH</IRI>
+        <Literal>BIREME. DeCS/MeSH – Descritores em Ciências da Saúde. São Paulo: BIREME/OPAS/OMS, [20--].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/DeCSMeSH</IRI>
+        <Literal>https://decs.bvsalud.org/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/DeCSMeSH</IRI>
+        <Literal>https://decs.bvsalud.org/ths/resource/?id=13233&amp;filter=ths_termall&amp;q=sinusite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/DeCSMeSH</IRI>
+        <Literal>O tesauro multilíngue DeCS/MeSH – Descritores em Ciências da Saúde/Medical Subject Headings é um vocabulário estruturado criado pela BIREME em 1986 para servir como linguagem única na indexação de artigos de revistas científicas, livros, anais de congressos, relatórios técnicos, e outros tipos de documentos, assim como para ser usado na pesquisa e recuperação de assuntos da literatura científica nas fontes de informação disponíveis na Biblioteca Virtual em Saúde (BVS) como LILACS, MEDLINE e outras.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/DeCSMeSH</IRI>
+        <Literal>Descritor em português:  Sinusite
+Descritor em inglês: Sinusitis
+Descritor em espanhol: Sinusitis (Espanhol da Espanha) 
+Descritor em francês: Sinusite
+Termo(s) alternativo(s): Infecções nos Seios Paranasais
+Identificador Único RDF: https://id.nlm.nih.gov/mesh/D012852
+Nota de escopo: Inflamação da MUCOSA NASAL em um ou mais dos SEIOS PARANASAIS.
+Nota de indexação: geral ou não especificado; prefira específicos; rinossinusite: indexe sob RINITE + SINUSITE</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/DeCSMeSH</IRI>
+        <Literal>DeCS/MeSH: Descritores em Ciências da Saúde/Medical Subject Headings</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Documento</IRI>
+        <Literal>Nota: A definição de documento adotada abrange tanto documentos impressos quanto não impressos, incluindo diferentes suportes e formatos de registro da informação, como materiais analógicos e digitais, conforme previsto na ABNT NBR 12676.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Documento</IRI>
+        <Literal>ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 12676: métodos para análise de documentos: determinação de seus assuntos e seleção de termos de indexação. Rio de Janeiro, 1992. 4 p.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Documento</IRI>
+        <Literal>https://www.semas.pa.gov.br/wp-content/uploads/2018/04/NBR-12676-INDEXACAO.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Documento</IRI>
+        <Literal>item bibliográfico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Documento</IRI>
+        <Literal>material bibliográfico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Documento</IRI>
+        <Literal>recurso informacional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Documento</IRI>
+        <Literal>registro bibliográfico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Documento</IRI>
+        <Literal>Documento e qualquer unidade, impressa ou não, que seja passível de catalogação ou indexação. Nota: Esta definição se refere não apenas a materiais escritos (ex.: livros, jornais, diagramas, mapas), mas também a suportes não-impressos (ex.: registros legíveis por máquina*, filmes, gravações sonoras), objetos tridimensionais e realia usadas como espécimes. (NBR 12676, 1992, p. 1)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/Documento</IRI>
+        <Literal>Exemplos: Artigos de revistas científicas, teses, dissertações, ebooks, jornais, livros, manuais, normas técnicas, relatórios técnicos, entre outros. Em suportes analógicos ou digitais.
+
+Livro: LANCASTER, F. W. Indexação e resumos: teoria e prática.
+Tese de doutorado sobre representação temática</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Documento</IRI>
+        <Literal>Documento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/DocumentoCatalogado</IRI>
+        <Literal>Documento catalogado é o documento informacional que já passou pelo processo de descrição física ou bibliográfica (como título, autoria, editora e local de publicação) e encontra-se na etapa de descrição temática, na qual são definidos os assuntos que representam seu conteúdo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/DocumentoCatalogado</IRI>
+        <Literal>MEY, Eliane Serrão Alves. Introdução à catalogação. Brasília: Briquet de Lemos, 1995.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/DocumentoCatalogado</IRI>
+        <Literal>item bibliográfico catalogado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/DocumentoCatalogado</IRI>
+        <Literal>material bibliografico catalogado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/DocumentoCatalogado</IRI>
+        <Literal>Documento catalogado:
+823.7
+A933
+Título: Emma
+Autor: Austen, Jane
+Editora: Companhia da Letras
+Ano: 2021</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/DocumentoCatalogado</IRI>
+        <Literal>DocumentoCatalogado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/DocumentoCatalogado</IRI>
+        <Literal>O conceito de Documento catalogado foi construído a partir das descrições do processo de catalogação e de representação temática presentes na literatura da área, especialmente em Mey (1995), nas quais o documento, após ser analisado e tratado, passa a ser representado no catálogo por meio de pontos de acesso, em particular de assunto. A obra não apresenta uma definição explícita do termo, razão pela qual este conceito foi formalizado no contexto desta ontologia.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>A definição para baseada em análises das Políticas de Indexação selecionada para a pesquisa.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>No contexto do processo de autorização de um termo novo, a estrutura do termo contempla relações de equivalência, associativas, hierárquicas e semânticas, necessárias à sua adequada inserção em vocabulários controlados.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>https://www.gov.br/ibict/pt-br/central-de-conteudos/publicacoes/TESAUROCOMPLETOFINALCOMCAPA_24102014.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>https://biblioteca.ufam.edu.br/images/doc/politica_indexacao_revistaRM.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>https://biblioteca.ufc.br/pt/normas-sibi/politica-de-indexacao-do-sistema-de-bibliotecas-da-ufc/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>https://biblioteca.unesp.br/portal/arquivos/manual-de-politica-de-indexacao.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>https://bibliotecas.ufpr.br/wp-content/uploads/2022/04/Politicas-de-Representacao-Tematica-SiBi.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>https://files.cercomp.ufg.br/weby/up/88/o/Manual_Politica_SIBi_UFG.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>https://www.sibi.ufscar.br/arquivos/manual_indexacao_2021.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>Arranjo do termo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>Composição do termo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>configuração do termo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>Literatura científica
+*ING: primary literature (UF scholarly literature, scientific literature)
+**TG documentos por estrutura
+***TR anais de congressos
+ informação científica e tecnológica
+ monografias
+ periódicos científicos
+ pesquisa
+ pré-publicações
+ produtividade científica
+ relatórios técnicos
+ revisões de literatura
+****NE: Literatura escrita por cientistas, para cientistas, para relatar pesquisas novas e originais.
+
+*termo em inglês
+**termo geral
+***termo relacionado
+****nota explicativa
+Fonte: Brasileiro em Ciência da Informação (IBICT, 2014, p.144))</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>Estrutura do termo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/EstruturaDoTermo</IRI>
+        <Literal>Esta classe representa uma estrutura de referência para a construção e avaliação de termos novos, baseada em normas e instrumentos de controle terminológico. Seu uso não é obrigatório, podendo ser adotada total ou parcialmente pelas bibliotecas, conforme suas políticas de indexação e práticas institucionais.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/FontesDeInformação</IRI>
+        <Literal>Recomenda-se a inclusão da data de consulta da fonte, especialmente quando se tratar de recursos disponíveis on-line, a fim de garantir a rastreabilidade da informação e o registro do momento em que o conteúdo foi acessado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/FontesDeInformação</IRI>
+        <Literal>UNIVERSIDADE FEDERAL DO CEARÁ. Sistema de Bibliotecas. Política de indexação das bibliotecas universitárias da Universidade Federal do Ceará. Fortaleza: Sistema de Bibliotecas da UFC, 2016.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/FontesDeInformação</IRI>
+        <Literal>https://biblioteca.ufc.br/pt/normas-sibi/politica-de-indexacao-do-sistema-de-bibliotecas-da-ufc/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/FontesDeInformação</IRI>
+        <Literal>fontes consultadas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/FontesDeInformação</IRI>
+        <Literal>As fontes de consulta referem-se aos recursos informacionais utilizados para verificar a existência prévia de um termo ou conceito já autorizado, bem como, no caso de proposição de um termo novo, para subsidiar a construção de sua estrutura terminológica. Incluem-se, ainda, as fontes consultadas para avaliar a pertinência do termo ao domínio de conhecimento e ao escopo temático da biblioteca.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/FontesDeInformação</IRI>
+        <Literal>Termo: Curadoria digital
+
+Fonte positiva:
+Tesauro Brasileiro em Ciência da Informação (IBICT) (19/12/2025)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/FontesDeInformação</IRI>
+        <Literal>Fontes de Informação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Formulario</IRI>
+        <Literal>Formulário é o instrumento utilizado para formalizar o processo de inclusão de novos termos, orientando o registro de informações necessárias à análise do termo, especialmente quanto ao seu contexto de uso, de modo a subsidiar a decisão de autorização. Manual Política de Indexação do Sistema de Bibliotecas da Universidade Federal de Goiás (UFG) (2018, p.48).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Formulario</IRI>
+        <Literal>https://files.cercomp.ufg.br/weby/up/88/o/Manual_Politica_SIBi_UFG.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/Formulario</IRI>
+        <Literal>campos de Formulário de Solicitação de Inclusão de Termo Novo: termo, *variantes gráficas (se houver), termo em inglês, fontes positivas, documento catalogado, data da solicitação, solicitante (Nome/Campus) *Variante gráfica não deve ser entendida como sinônimos, homônimos e antônimos do termo e sim como variação de grafia, ex: Haicai (autorizado na BN), Haikai (autorizado na LC)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Formulario</IRI>
+        <Literal>Formulário</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/FormularioDeSolicitacaoDeInclusaoDeTermoNovo</IRI>
+        <Literal>Formulário é o instrumento utilizado para formalizar o processo de inclusão de novos termos, orientando o registro de informações necessárias à análise do termo, especialmente quanto ao seu contexto de uso, de modo a subsidiar a decisão de autorização. Manual Política de Indexação do Sistema de Bibliotecas da Universidade Federal de Goiás (UFG) (2018, p.48).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/FormularioDeSolicitacaoDeInclusaoDeTermoNovo</IRI>
+        <Literal>Universidade Federal de Goiás. Sistema de Bibliotecas da UFG. Manual de política de indexação para as bibliotecas da UFG. Elaborado e organizado por Enderson Medeiros e Adriana Ribeiro. Goiânia: Sistema de Bibliotecas da UFG, 2018.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/FormularioDeSolicitacaoDeInclusaoDeTermoNovo</IRI>
+        <Literal>https://files.cercomp.ufg.br/weby/up/88/o/Manual_Politica_SIBi_UFG.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/FormularioDeSolicitacaoDeInclusaoDeTermoNovo</IRI>
+        <Literal>Instrumento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/FormularioDeSolicitacaoDeInclusaoDeTermoNovo</IRI>
+        <Literal>ficha</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/FormularioDeSolicitacaoDeInclusaoDeTermoNovo</IRI>
+        <Literal>campos de Formulário de Solicitação de Inclusão de Termo Novo: termo, *variantes gráficas (se houver), termo em inglês, fontes positivas, documento catalogado, data da solicitação, solicitante (Nome/Campus) *Variante gráfica não deve ser entendida como sinônimos, homônimos e antônimos do termo e sim como variação de grafia, ex: Haicai (autorizado na BN), Haikai (autorizado na LC)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/FormularioDeSolicitacaoDeInclusaoDeTermoNovo</IRI>
+        <Literal>Formulário de Solicitação de Inclusão de Termo Novo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Instrumentos</IRI>
+        <Literal>BRUM, Lilian Morais; MACULAN, Benildes Coura M. S. Política de indexação como recurso de gestão de unidade de informação. Ciência da Informação Express, Lavras, n. 5, p. 1–21, 10 jan. 2023.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Instrumentos</IRI>
+        <Literal>Na literatura brasileira, as políticas de indexação são compreendidas como instrumentos de gestão das unidades de informação. O estudo pioneiro de Carneiro (1985) sistematizou diretrizes para sua elaboração, e pesquisas posteriores, como as de Gil-Leiva, Fujita e Rubi, reforçam esse entendimento. Essa perspectiva articula-se às concepções de gestão organizacional (Ramos, 1996) e de gestão da informação (Nonato, 2022), nas quais políticas e diretrizes atuam como instrumentos que orientam processos, responsabilidades e a organização dos serviços informacionais. Brum e Macula (2024, p.3)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Instrumentos</IRI>
+        <Literal>https://cienciadainformacaoexpress.ufla.br/index.php/revista/article/view/107/103</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Instrumentos</IRI>
+        <Literal>diretrizes de indexação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Instrumentos</IRI>
+        <Literal>documentos normativos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Instrumentos</IRI>
+        <Literal>instrumentos de gestão</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/Instrumentos</IRI>
+        <Literal>As políticas de indexação atuam como instrumentos de apoio à gestão das unidades de informação, ao balizarem decisões relacionadas ao processo de indexação.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Instrumentos</IRI>
+        <Literal>Instrumentos normativos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/JustificativaDoUsuario</IRI>
+        <Literal xml:lang="en">NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/JustificativaDoUsuario</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/JustificativaDoUsuario</IRI>
+        <Literal>A justificativa do usuário geralmente é refletida pelo uso de termos em solicitações de informações sobre o conceito ou em pesquisas sobre o termo por usuários de um sistema de armazenamento e recuperação de informações. ANSI/NISO (2010, p.16)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/JustificativaDoUsuario</IRI>
+        <Literal>Justificativa do usuário: Um termo pode ser proposto e autorizado em função de sua recorrência nas demandas de pesquisa de usuários da biblioteca, especialmente em trabalhos acadêmicos recentes da área, nos quais a expressão é amplamente utilizada para representar o tema tratado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/JustificativaDoUsuario</IRI>
+        <Literal>Justificativa do usuário</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/LibraryOfCongressSubjectHeadings</IRI>
+        <Literal>Library of Congress Subject Headings (LCSH).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/LibraryOfCongressSubjectHeadings</IRI>
+        <Literal>https://id.loc.gov/authorities/subjects.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/LibraryOfCongressSubjectHeadings</IRI>
+        <Literal xml:lang="en">Os Cabeçalhos de Assunto da Biblioteca do Congresso (LCSH) são mantidos ativamente desde 1898 para catalogar materiais mantidos na Biblioteca do Congresso. Graças à catalogação cooperativa, outras bibliotecas nos Estados Unidos também usam o LCSH para fornecer acesso por assunto às suas coleções. Além disso, o LCSH é usado internacionalmente, frequentemente em traduções.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/LibraryOfCongressSubjectHeadings</IRI>
+        <Literal xml:lang="en">Library of Congress Subject Headings (LCSH)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/LibraryOfCongressSubjectHeadings</IRI>
+        <Literal>Catálogo de autoridades da Library of Congress.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NALTVocabularies</IRI>
+        <Literal>UNITED STATES DEPARTMENT OF AGRICULTURE (USDA). National Agricultural Library. NALT Concept Space. Washington, DC,</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NALTVocabularies</IRI>
+        <Literal>https://lod.nal.usda.gov/en/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/NALTVocabularies</IRI>
+        <Literal xml:lang="en">NALT (National Agricultural Library Thesaurus) é um vocabulário controlado especializado na área agrícola, desenvolvido para apoiar a organização, indexação, recuperação e interoperabilidade de informações, incluindo aplicações voltadas à automação, aprendizado de máquina e inteligência artificial. O NALT integra conceitos agrícolas, organismos taxonômicos e estruturas semânticas organizadas como base de conhecimento legível por máquina.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/NALTVocabularies</IRI>
+        <Literal>NALT (National Agricultural Library Thesaurus)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/NALTVocabularies</IRI>
+        <Literal>Catálogo de autoridades da Biblioteca Nacional de Agricultura (Estados Unidos)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NormaANSINISO</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NormaANSINISO</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/NormaANSINISO</IRI>
+        <Literal>ANSI/NISO Z39.19-2005 (R2010) Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/NormaANSINISO</IRI>
+        <Literal>Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/NormaANSINISO</IRI>
+        <Literal>A norma ANSI/NISO Z39.19, elaborada pelo National Information Standards Organization (NISO) e aprovada pelo American National Standards Institute (ANSI), estabelece diretrizes e convenções para a construção, formatação, manutenção e gerenciamento de vocabulários controlados monolíngues, utilizados na representação e recuperação da informação em sistemas de organização do conhecimento. Essa norma concentra-se em vocabulários controlados empregados para descrever objetos de conteúdo de forma consistente, incluindo listas controladas, anéis de sinônimos, taxonomias e tesauros. Seu objetivo principal é promover a consistência terminológica e facilitar a recuperação da informação, por meio da definição do escopo e do significado dos termos, do uso de relações de equivalência, relações hierárquicas e associativas, bem como da distinção entre homógrafos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/NormaANSINISO</IRI>
+        <Literal xml:lang="en">Norma ANSI/NISO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NotaDeEscopo</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NotaDeEscopo</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/NotaDeEscopo</IRI>
+        <Literal>Uma nota de escopo deve indicar o significado escolhido de um termo. Também pode indicar outros significados que são reconhecidos na linguagem natural, mas que foram deliberadamente excluídos do vocabulário controlado. ANSI/NISO (2010, p.107)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/NotaDeEscopo</IRI>
+        <Literal>Uma nota de escopo é usada: 
+- para restringir ou expandir a aplicação de um termo,
+- para distinguir entre termos que têm significados sobrepostos na linguagem natural, ou 
+- para fornecer outros conselhos sobre o uso do termo para o indexador ou para o pesquisador.
+Uma nota de escopo deve declarar o significado escolhido de um termo. Ela pode também indicar outros significados que são reconhecidos na linguagem natural, mas que foram deliberadamente excluídos do vocabulário controlado. 
+ANSI/NISO (2010, p.22)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/NotaDeEscopo</IRI>
+        <Literal>Nota de escopo (NE)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NotaDeHistorico</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NotaDeHistorico</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/NotaDeHistorico</IRI>
+        <Literal>Uma Nota de Histórico é usada para rastrear o desenvolvimento de termos ao longo do tempo. Essas notas fornecem orientação importante para pesquisadores que estão interessados em um tópico que abrange muitas décadas. É especialmente importante indicar quando e como um termo mudou ao longo do tempo. Se apropriado, a nota de histórico pode também incluir a data de descontinuação, o termo que sucedeu o termo e/ou o termo que o precedeu. As Notas de Histórico são frequentemente marcadas pela abreviação NH. ANSI/NISO (2010, p.22)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/NotaDeHistorico</IRI>
+        <Literal>Nota de histórico: O uso do termo comunidades científicas intensificou-se a partir da segunda metade do século XX, em paralelo à ampliação dos estudos sobre produção e circulação do conhecimento científico, passando a incorporar diferentes categorias de atores acadêmicos em sua conceituação.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/NotaDeHistorico</IRI>
+        <Literal>Nota de historico (NH)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NotaJustificativaLiteraria</IRI>
+        <Literal xml:lang="en">NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NotaJustificativaLiteraria</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/NotaJustificativaLiteraria</IRI>
+        <Literal>JustificativaLiteraria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/NotaJustificativaLiteraria</IRI>
+        <Literal>A avaliação da justificativa literária envolve a revisão dos objetos de conteúdo primário ou secundário que o vocabulário será usado para indexar, bem como a consulta de fontes de referência, como dicionários ou livros didáticos e vocabulários existentes para o domínio do conteúdo. A palavra ou frases escolhidas devem corresponder o mais próximo possível ao uso predominante na literatura do domínio. ANSI/NISO (2010, p.26)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/NotaJustificativaLiteraria</IRI>
+        <Literal>Exemplo de Justificativa literária: Um termo pode ser autorizado por ter seu uso consolidado na literatura científica da área, conforme identificado em artigos, livros e documentos especializados, sendo empregado de forma consistente para representar o conceito no domínio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NotaJustificativaOrganizacional</IRI>
+        <Literal xml:lang="en">NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NotaJustificativaOrganizacional</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/NotaJustificativaOrganizacional</IRI>
+        <Literal>JustificativaOrganizacional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/NotaJustificativaOrganizacional</IRI>
+        <Literal>A determinação da justificativa organizacional requer a identificação da forma ou formas de termos que são preferidas pela organização ou organizações que usarão o vocabulário controlado. ANSI/NISO (2010, p.16)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/NotaJustificativaOrganizacional</IRI>
+        <Literal>Exemplo de Justificativa organizacional: Um termo pode ser proposto e autorizado por refletir áreas de ensino, pesquisa e extensão desenvolvidas na instituição, estando presente em projetos, linhas de pesquisa e documentos institucionais vinculados à universidade.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Notas</IRI>
+        <Literal>CUNHA, Murilo Bastos da; CAVALCANTI, Cordélia Robalinho de Oliveira. Dicionário de Biblioteconomia e Arquivologia. Brasília: Briquet de Lemos, 2008.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Notas</IRI>
+        <Literal>http://repositorio.unb.br/handle/10482/34113</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Notas</IRI>
+        <Literal>Notas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Notas</IRI>
+        <Literal>anotações</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Notas</IRI>
+        <Literal>comentários</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Notas</IRI>
+        <Literal>observações</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Notas</IRI>
+        <Literal>Notas bibliográficas e catalográficas referem-se a dados adicionais que devem ser incluídos no registro bibliográfico com a finalidade de complementar e ampliar a descrição convencional do documento. Cunha (2008, p. 262)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/Notas</IRI>
+        <Literal>Nota: O termo é empregado na literatura da Ciência da Informação para designar práticas de representação temática adotadas em ambientes biblioteconômicos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/PoliticaDeIndexação</IRI>
+        <Literal>RUBI, M. P. Proposta para implantação de política de indexação em bibliotecas. In: LEIVA, I. G., and FUJITA, M. S. L., eds. Política de indexação [online]. São Paulo: Cultura Acadêmica; Marília: Oficina Universitária, 2012, pp. 171-183.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/PoliticaDeIndexação</IRI>
+        <Literal>https://books.scielo.org/id/dk5kd/pdf/leiva-9786559541300-10.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/PoliticaDeIndexação</IRI>
+        <Literal>Política de Indexação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/PoliticaDeIndexação</IRI>
+        <Literal>Diretrizes de indexação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/PoliticaDeIndexação</IRI>
+        <Literal>Normas de indexação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/PoliticaDeIndexação</IRI>
+        <Literal>Política de Representação Temática da Informação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/PoliticaDeIndexação</IRI>
+        <Literal>A política de indexação deve ser compreendida como uma decisão administrativa objetivando a gestão da informação registrada de modo a dar visibilidade, na recuperação da informação, para as bibliotecas universitárias. Essa decisão deve ser representada por meio de uma filosofia que reflita os objetivos da biblioteca, identificando condutas teóricas e práticas das equipes envolvidas no tratamento da informação da biblioteca para definir um padrão de cultura organizacional coerente com a demanda da comunidade acadêmica interna e externa. Rubi (p.174)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ProcessoDeAutorizacaoDeTermoNovo</IRI>
+        <Literal>Nota: Não há fonte textual explícita para a definição do conceito de ProcessoDeAutorizaçãoDeTermoNovo. A classe foi inferida a partir da análise das políticas de indexação examinadas, nas quais se identificam procedimentos institucionais para a autorização de termos novos. Observou-se que, em algumas dessas políticas, o processo encontra-se formalizado por meio de formulários, enquanto em outras ele é descrito de forma implícita, o que justificou sua abstração e modelagem ontológica.  Baseado nas Políticas de Indexação de: Universidade Federal de São Carlos (UFSCar) (2021), Universidade Estadual de São Paulo (UNESP) (2014), e Universidade Federal de Goiás (UFG) (2018).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ProcessoDeAutorizacaoDeTermoNovo</IRI>
+        <Literal>Processo de autorização de um termo novo, inicia-se quando um termo novo é proposto e seguido por etapas que, embora não formalizadas em documentos normativos, podem ser inferidas a partir dos formulários utilizados pelas bibliotecas. Essas etapas correspondem, de modo implícito, à análise, avaliação e deliberação sobre a aceitação ou não do termo para inclusão no vocabulário controlado da instituição. Envolve a participação de agentes designados, a verificação de critérios institucionais e a emissão de uma decisão formal (autorização, não autorização ou devolução para ajustes).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ProcessoDeAutorizacaoDeTermoNovo</IRI>
+        <Literal>https://biblioteca.unesp.br/portal/arquivos/manual-de-politica-de-indexacao.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ProcessoDeAutorizacaoDeTermoNovo</IRI>
+        <Literal>https://files.cercomp.ufg.br/weby/up/88/o/Manual_Politica_SIBi_UFG.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ProcessoDeAutorizacaoDeTermoNovo</IRI>
+        <Literal>https://www.sibi.ufscar.br/arquivos/manual_indexacao_2021.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/ProcessoDeAutorizacaoDeTermoNovo</IRI>
+        <Literal>Exemplo: um termo é proposto pelo Agente Solicitante, é analisado e 
+avaliado pelo Agente Decisor, que decide se autoriza, não 
+autoriza ou reencaminha para adequações.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/ProcessoDeAutorizacaoDeTermoNovo</IRI>
+        <Literal>Processo de Autorização</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ProcessoDeIndexação</IRI>
+        <Literal>O processo de indexação pode motivar a solicitação de autorização de termos novos. No entanto, a ontologia não estabelece uma relação estrutural direta entre ProcessoDeIndexação e ProcessoDeAutorização, por se tratarem de processos institucionais distintos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ProcessoDeIndexação</IRI>
+        <Literal>LANCASTER, F. W. Indexação e resumos: teoria e prática. Brasília: Briquet de Lemos, 2004.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ProcessoDeIndexação</IRI>
+        <Literal>Processo intelectual pelo qual um documento é analisado com o objetivo de identificar seus assuntos e conceitos, considerando o contexto institucional e as necessidades dos usuários, resultando na seleção e formalização de termos que representam o conteúdo do documento em um sistema de informação.
+Lancaster (2004.p.20)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/ProcessoDeIndexação</IRI>
+        <Literal>Processo de Indexação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Propoe</IRI>
+        <Literal>Relaciona o Agente Solicitante ao Termo Novo que ele propõe para autorização.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/QuaseSinonimos</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/QuaseSinonimos</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/QuaseSinonimos</IRI>
+        <Literal>Quase-sinônimos são termos cujos significados são geralmente diferentes, mas que podem ser tratados como equivalentes para os propósitos de um vocabulário controlado. O grau em que os termos são tratados como quase-sinônimos depende do domínio temático e da extensão do vocabulário. Podem incluir antônimos ou representar pontos em um continuum.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/QuaseSinonimos</IRI>
+        <Literal>termos quase sinônimos:
+
+água do mar / água salgada;
+meteoros / meteoritos / meteoroides
+suavidade / rugosidade
+
+(ANSI/NISO, 2010, p.45)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/QuaseSinonimos</IRI>
+        <Literal>Quase sinônimos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ReferenciasCruzadas</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ReferenciasCruzadas</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ReferenciasCruzadas</IRI>
+        <Literal>Referências cruzadas. A referência USE… AND é utilizada quando um termo composto deve ser substituído pela combinação de seus componentes separados, indicando ao indexador ou pesquisador que ambos os termos precisam ser usados juntos para representar adequadamente o conceito. Já a referência USADO PARA (UF) pode ser utilizada como forma recíproca, mostrando que os componentes individuais não devem ser usados isoladamente quando representam apenas parcialmente o conceito. ANSI/NISO (2010, p.46)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/ReferenciasCruzadas</IRI>
+        <Literal>referências cruzadas ou remissivas:
+
+Carvão    USADO PARA    carvão AND mineração; 
+mineração    USADO PARA    carvão AND mineração 
+
+ANSI/NISO ( 2010, p.46)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/ReferenciasCruzadas</IRI>
+        <Literal>Referências cruzadas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/ReferenciasCruzadas</IRI>
+        <Literal>Trata-se de uma referência cruzada do tipo USADO PARA, na qual os termos carvão e mineração não devem ser utilizados isoladamente, sendo direcionados para o uso combinado carvão AND mineração</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RelacoesAssociativas</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RelacoesAssociativas</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/RelacoesAssociativas</IRI>
+        <Literal>A relação associativa (RT) é utilizada para explicitar a natureza da ligação semântica entre termos conceitualmente relacionados, sendo fundamental definir com clareza essa relação a fim de evitar julgamentos subjetivos e o estabelecimento inconsistente de referências RT no vocabulário controlado. ANSI/NISO (2010, p.51)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/RelacoesAssociativas</IRI>
+        <Literal>computação gráfica
+*TR imagens
+
+*termo relacionado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/RelacoesAssociativas</IRI>
+        <Literal>Relações associativas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RelacoesDeEquivalencia</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RelacoesDeEquivalencia</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/RelacoesDeEquivalencia</IRI>
+        <Literal>Aves USE pássaros
+- indica que Aves é um termo não autorizado e que deve ser substituído pelo termo autorizado pássaros.
+
+pássaros UF Aves
+- indica que pássaros é o termo autorizado e que Aves é uma forma variante não autorizada.
+
+contorno USE forma
+- indica que contorno não deve ser utilizado na indexação, sendo substituído por forma.
+
+forma UF contorno
+- indica que forma é o termo autorizado e que contorno é uma variante não autorizada.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/RelacoesDeEquivalencia</IRI>
+        <Literal>Quando o mesmo conceito pode ser expresso por dois ou mais termos, um deles é selecionado como o termo preferencial. O relacionamento entre termos preferenciais e não preferenciais é um relacionamento de equivalência no qual cada termo é considerado como referente ao mesmo conceito. O termo preferencial, na verdade,
+ substitui outros termos que expressam conceitos equivalentes ou quase equivalentes. Uma referência cruzada ao termo preferencial deve ser feita a partir de qualquer termo de entrada “equivalente&quot;. 
+
+O relacionamento de equivalência é expresso pelas seguintes convenções: U ou USE, que leva de um termo não preferencial (entrada) ao termo preferencial, e UF ou USED FOR ou USE PARA, o relacionamento recíproco, que leva do termo de entrada preferencial ao termo(s) não preferencial(is). ANSI/NISO (2010, p.43)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/RelacoesDeEquivalencia</IRI>
+        <Literal>relacionamentos USE e UF:
+
+Aves USE pássaros
+
+pássaros UF Aves
+
+contorno USE forma
+forma UF contorno
+
+Os relacionamentos USE e UF (Usado Para) indicam relações de equivalência entre termos. O termo indicado por USE é o termo preferido, que deve ser utilizado na indexação, enquanto o termo indicado por UF corresponde a uma forma não preferida, registrada como remissiva. Assim, quando o usuário busca por um termo não autorizado, como aves ou contorno, é direcionado ao termo preferido correspondente (pássaros e forma), garantindo padronização terminológica e recuperação consistente da informação.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/RelacoesDeEquivalencia</IRI>
+        <Literal>Relações de equivalência</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/RelacoesDeEquivalencia</IRI>
+        <Literal>Usada para controlar sinônimos e variantes terminológicas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RelacoesHierarquicas</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RelacoesHierarquicas</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/RelacoesHierarquicas</IRI>
+        <Literal>Relações hierárquicas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/RelacoesHierarquicas</IRI>
+        <Literal>As relações hierárquicas são baseadas em graus ou níveis de superordenação e subordinação, onde o termo superordenado representa uma classe ou um todo, e os termos subordinados se referem aos seus  membros ou partes. A reciprocidade deve ser expressa pelos seguintes indicadores de relacionamento:
+
+- BT (Termo Mais Amplo), um rótulo para o termo superordenado (pai) 
+- NT (Termo Mais Estreito), um rótulo para o termo subordinado (filho)
+
+ANSI/NISO (2010, p.46)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/RelacoesHierarquicas</IRI>
+        <Literal>Relação hierárquica BT (Termo mais amplo). Indica o termo superordenado (pai) em uma relação hierárquica, representando um conceito mais geral. Mamíferos BT  (termo mais restrito) Animais</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RelacoesSemanticas</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RelacoesSemanticas</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/RelacoesSemanticas</IRI>
+        <Literal>Vários tipos de relações semânticas podem ser identificados entre os termos em um vocabulário controlado. Estes incluem relações de igualdade, relações hierárquicas e relações associativas, que podem ser definidas  conforme necessário para uma aplicação específica. ANSI/NISO (2010, p.14)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/RelacoesSemanticas</IRI>
+        <Literal>computação gráfica
+ING: computer graphics
+TG aplicações de computador
+TE animação assistida por computador
+TR imagens
+
+*termo em inglês
+**termo geral
+***termo específico
+****termo relacionado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/RelacoesSemanticas</IRI>
+        <Literal>Relações Semânticas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Remissivas</IRI>
+        <Literal>Remissiva é o mecanismo utilizado na representação temática da informação para estabelecer relações de equivalência entre termos, orientando a escolha do termo preferido e direcionando as demais formas, como sinônimos, variantes ou formas não preferidas, para esse termo, por meio de indicações do tipo USE e USADO POR (UP).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Remissivas</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Remissivas</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Remissivas</IRI>
+        <Literal>referências cruzadas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/Remissivas</IRI>
+        <Literal>Exemplos de remissivas
+
+mobiliário
+UF camas
+UF cadeiras
+UF escrivaninhas
+UF mesas
+
+camas USE mobiliário
+cadeiras USE mobiliário
+escrivaninhas USE mobiliário
+mesas USE mobiliário
+
+Termo preferido: mobiliário
+
+UF (Used For / Usado Para)
+
+mobiliário
+UF camas
+UF cadeiras
+UF escrivaninhas
+UF mesas
+
+camas, cadeiras, escrivaninhas e mesas
+são termos não preferidos e não devem ser usados isoladamente
+
+todos remetem ao termo preferido “mobiliário”
+
+ USE (Use)
+camas USE mobiliário
+cadeiras USE mobiliário
+escrivaninhas USE mobiliário
+mesas USE mobiliário
+
+ANSI/NISO (2010, p.46)
+
+
+É a forma recíproca da remissiva:
+
+quando alguém procura camas, o sistema orienta: USE mobiliário
+
+O que isso representa conceitualmente. Trata-se de relações de equivalência.Operacionalizadas por referências cruzadas. Com o objetivo de escolher um termo preferido direcionar os termos não preferidos a ele garantir padronização terminológica.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Remissivas</IRI>
+        <Literal>Remissivas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/Remissivas</IRI>
+        <Literal>O exemplo apresentado na ANSI/NISO Z39.19 ilustra o uso de referências cruzadas de equivalência, nas quais o termo mobiliário é estabelecido como termo preferido, enquanto camas, cadeiras, escrivaninhas e mesas são tratados como termos não preferidos, sendo direcionados ao termo autorizado por meio das indicações USE e USADO PARA (UF).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Sinonimos</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Sinonimos</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Sinonimos</IRI>
+        <Literal>Sinônimos são termos que possuem significados iguais ou muito próximos em diversos contextos. Podem ser usados de forma intercambiável em muitas situações, embora possam apresentar variações relacionadas ao nível de formalidade, uso técnico, contexto profissional ou conotação. ANSI/NISO (2010, p.44)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/Sinonimos</IRI>
+        <Literal>termos sinônimos:
+
+gatos / felinos
+
+Sinònimos de nomes populares e científicos:
+
+aspirina / ácido acetilsalicílico
+sal / cloreto de sódio
+
+Termos atuais ou preferidos substituindo termos desatualizados ou depreciados:
+
+poliomielite / paralisia infantil
+países em desenvolvimento / países subdesenvolvidos 
+
+Fonte: ANSI/NISO (2010, p.44)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Sinonimos</IRI>
+        <Literal>Sinônimos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/SistemaDeBibliotecas</IRI>
+        <Literal>FAQUETI, Marouva Fallgatter; DUTRA, Sigrid Weiss; ALVES, João Bosco da Mota; ROVER, Aires José. Sistemas de bibliotecas: uma análise a partir de seus regimentos. RDBCI: Revista Digital de Biblioteconomia e Ciência da Informação, Campinas, SP, v. 15, n. 3, p. 715–735, 2017.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/SistemaDeBibliotecas</IRI>
+        <Literal>https://periodicos.sbu.unicamp.br/ojs/index.php/rdbci/article/view/8646300.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/SistemaDeBibliotecas</IRI>
+        <Literal>Sistema  de  Bibliotecas é  uma  organização  composta  por  um  conjunto  de bibliotecas  ou  departamentos,inter-relacionados  em  uma  dada  estrutura,compondo  uma unidade com objetivos comuns que o identificam como tal. (2017, p.723)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/SistemaDeBibliotecas</IRI>
+        <Literal>Exemplo: Sistemas de Bibliotecas da Universidade Federal do Paraná - SiBi/UFPR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/SistemaDeBibliotecas</IRI>
+        <Literal>Sistema de Bibliotecas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SolicitaçãoDeInclusãoDeTermo</IRI>
+        <Literal>A solicitação reúne informações que subsidiam a análise e a decisão sobre a autorização do termo, podendo ou não ser registrada por meio de formulário, a depender das práticas institucionais.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SolicitaçãoDeInclusãoDeTermo</IRI>
+        <Literal>Solicitação formal de inclusão de um termo novo em uma base de autoridades, realizada no contexto do processo de autorização de termos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/SolicitaçãoDeInclusãoDeTermo</IRI>
+        <Literal>Baseado nas Políticas de Indexação de: Universidade Federal de São Carlos (UFSCar) (2021), Universidade Estadual de São Paulo (UNESP) (2014), e Universidade Federal de Goiás (UFG) (2018).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/SolicitaçãoDeInclusãoDeTermo</IRI>
+        <Literal>https://biblioteca.unesp.br/portal/arquivos/manual-de-politica-de-indexacao.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/SolicitaçãoDeInclusãoDeTermo</IRI>
+        <Literal>https://files.cercomp.ufg.br/weby/up/88/o/Manual_Politica_SIBi_UFG.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/SolicitaçãoDeInclusãoDeTermo</IRI>
+        <Literal>https://www.sibi.ufscar.br/arquivos/manual_indexacao_2021.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/SolicitaçãoDeInclusãoDeTermo</IRI>
+        <Literal>Solicitação de inclusão de um termo novo, contendo a denominação do termo, justificativa e referências bibliográficas que fundamentam sua adoção.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TerminologiaEmPsicologia</IRI>
+        <Literal>BIBLIOTECA VIRTUAL EM SAÚDE (BVS). Terminologia em Psicologia. Brasília: BIREME/OPAS/OMS.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TerminologiaEmPsicologia</IRI>
+        <Literal>http://newpsi.bvs-psi.org.br/cgi-bin/wxis1660.exe/iah/?IsisScript=iah/iah.xis&amp;lang=P&amp;base=TERMINOLOGIA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/TerminologiaEmPsicologia</IRI>
+        <Literal>BVS Psicologia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/TerminologiaEmPsicologia</IRI>
+        <Literal>Terminologia em Psicologia, Biblioteca Virtual em Saúde,  Psicologia (BVS-Psi) é uma instância temática da Biblioteca Virtual em Saúde (BVS) dedicada à área de Psicologia, constituindo um espaço virtual cooperativo para seleção, organização, disseminação e acesso à produção científica, técnica e documental sobre Psicologia, com o objetivo de apoiar a pesquisa, o ensino e a prática profissional da psicologia no Brasil e na América Latina.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TerminologiaEmPsicologia</IRI>
+        <Literal>Terminologia em Psicologia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Termo</IRI>
+        <Literal xml:lang="en">NATIONAL INFORMATION STANDARDS ORGANIZATION. ANSI/NISO Z39.19-2005 (R2010): Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies., 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Termo</IRI>
+        <Literal>https://www.niso.org/publications/ansiniso-z3919-2005-r2010</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Termo</IRI>
+        <Literal>Termo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Termo</IRI>
+        <Literal>Cabeçalho</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Termo</IRI>
+        <Literal>Descritor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Termo</IRI>
+        <Literal xml:lang="en">Termo é uma ou mais palavras que designam um conceito ANSI/NISO (2010, p. 66).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/Termo</IRI>
+        <Literal>As subclasses de Termo (por exemplo, TermoNovo, TermoComPendencia, TermoAutorizado e TermoNaoAutorizado) representam estados do termo no contexto do processo de autorização, permitindo explicitar o resultado da avaliação e o encaminhamento dado à solicitação.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/Termo</IRI>
+        <Literal>Exemplo: Uma unidade lexical que designa um conceito, como “Educação Inclusiva”.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TermoAutorizado</IRI>
+        <Literal>Definição elaborada com base na análise das Políticas de Indexação da UFSCar (2021), UNESP (2014) e UFG (2018), que mencionam diferentes agentes atuantes no processo de autorização de termos, sem apresentar uma definição geral da categoria Agente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TermoAutorizado</IRI>
+        <Literal>Termo autorizado é o termo que passou pelo processo de avaliação, atendeu aos critérios definidos pela política de indexação da biblioteca e, por isso, é aprovado para ser incorporado à base de termos autorizados.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoAutorizado</IRI>
+        <Literal>PINHEIRO, Lena Vania Ribeiro; FERREZ, Helena Dodd. Tesauro Brasileiro de Ciência da Informação. Rio de Janeiro; Brasília: Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT), 2014.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoAutorizado</IRI>
+        <Literal>https://www.sibi.ufscar.br/arquivos/manual_indexacao_2021.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/TermoAutorizado</IRI>
+        <Literal>descritor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/TermoAutorizado</IRI>
+        <Literal>https://biblioteca.unesp.br/portal/arquivos/manual-de-politica-de-indexacao.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/TermoAutorizado</IRI>
+        <Literal>https://files.cercomp.ufg.br/weby/up/88/o/Manual_Politica_SIBi_UFG.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/TermoAutorizado</IRI>
+        <Literal>termo preferido</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/TermoAutorizado</IRI>
+        <Literal>comunidades científicas UP comunidades acadêmicas. (UP - Usado Para)
+
+A relação UP (Usado Para) indica que o termo autorizado Comunidades científicas pode ser recuperado a partir da variante não autorizada comunidades acadêmicas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TermoAutorizado</IRI>
+        <Literal>Termo Autorizado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TermoComPendencia</IRI>
+        <Literal>A condição de pendência pressupõe o registro de uma justificativa, na qual são explicitados os motivos pelos quais o termo novo não foi autorizado naquele momento, bem como as orientações necessárias para sua adequação e continuidade no processo de autorização.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TermoComPendencia</IRI>
+        <Literal>Definição elaborada com base na análise das Políticas de Indexação da UFSCar (2021), UNESP (2014) e UFG (2018), que mencionam diferentes agentes atuantes no processo de autorização de termos, sem apresentar uma definição geral da categoria Agente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TermoComPendencia</IRI>
+        <Literal>Representa o estado do termo novo que, após avaliação, não foi autorizado naquele momento por apresentar pendências, as quais precisam ser registradas por meio de justificativa específica, a fim de orientar o agente solicitante quanto às adequações necessárias para a continuidade do processo de autorização.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoComPendencia</IRI>
+        <Literal>https://biblioteca.unesp.br/portal/arquivos/manual-de-politica-de-indexacao.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoComPendencia</IRI>
+        <Literal>https://files.cercomp.ufg.br/weby/up/88/o/Manual_Politica_SIBi_UFG.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoComPendencia</IRI>
+        <Literal>https://www.sibi.ufscar.br/arquivos/manual_indexacao_2021.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/TermoComPendencia</IRI>
+        <Literal>Exemplo de inconsistência: Termo novo solicitado para autorização: Aprendizagem Ativa, não foi inserido o equivalente em inglês: Active Learning. Neste caso, o agente decisor retorna o termo para o agente solicitante fazer adequações necessárias.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TermoComPendencia</IRI>
+        <Literal>Termo com pendência</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoEmLinguaEstrangeira</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoEmLinguaEstrangeira</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/TermoEmLinguaEstrangeira</IRI>
+        <Literal>Termos em línguas estrangeiras, ou seja, termos que não se tornaram naturalizados na língua do vocabulário controlado, devem ser vinculados a termos na língua preferida nos casos em que o estrangeiro é provável que os usuários busquem termos. O idioma escolhido para o termo deve ser aquele que o usuário provavelmente esperaria, com uma referência cruzada do termo equivalente no outro idioma. ANSI/NISO (2010, p.33)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/TermoEmLinguaEstrangeira</IRI>
+        <Literal>Exemplo de um termo em língua inglesa usado na literatura
+
+open access = acesso aberto
+
+Mineração de dados = data mining
+
+Autorizado pela BN (Biblioteca Nacional):
+Mineração de dados (Computação)
+Mining, Data
+Data mining
+
+Mineração de dados (Computação) é o termo preferido, autorizado pela Biblioteca Nacional, sendo Data mining e Mining, Data registrados como termos em língua estrangeira vinculados por equivalência.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TermoEmLinguaEstrangeira</IRI>
+        <Literal>Termo em língua estrangeira</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoEspecifico</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoEspecifico</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoEspecifico</IRI>
+        <Literal>https://www.gov.br/ibict/pt-br/central-de-conteudos/publicacoes/tesauro-brasileiro-de-ciencia-da-informacao</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/TermoEspecifico</IRI>
+        <Literal>PINHEIRO, Lena Vania Ribeiro; FERREZ, Helena Dodd. Tesauro Brasileiro de Ciência da Informação. Rio de Janeiro; Brasília: Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT), 2014.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/TermoEspecifico</IRI>
+        <Literal>Narrower Term (NT)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/TermoEspecifico</IRI>
+        <Literal>Termo específico é o termo subordinado em uma relação hierárquica, que representa um conceito mais restrito, particular ou detalhado em relação a um termo mais amplo. Ele expressa uma especialização do conceito geral, mantendo relação de subordinação semântica. ANSI/NISO (2010, p.46)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/TermoEspecifico</IRI>
+        <Literal>Exemplos de Termo específico (TE) ou Narrower Term (NT)
+
+Computadores
+TE computadores de grande porte
+
+Comunidades científicas
+TE cientistas
+
+Crime
+TE cibercrime
+
+Dados
+TE metadados
+
+O Termo Específico (TE) ou Narrower Term (NT) indica uma relação hierárquica em que o termo apresentado representa um conceito mais específico, incluído no significado de um termo mais amplo, permitindo maior precisão na representação e recuperação da informação.
+
+Tesauro Brasileiro em Ciência da Informação (IBCT, 2014))</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TermoEspecifico</IRI>
+        <Literal>Termo Específico (TE)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoGeral</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoGeral</IRI>
+        <Literal>PINHEIRO, Lena Vania Ribeiro; FERREZ, Helena Dodd. Tesauro Brasileiro de Ciência da Informação. Rio de Janeiro; Brasília: Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT), 2014.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoGeral</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoGeral</IRI>
+        <Literal>https://www.gov.br/ibict/pt-br/central-de-conteudos/publicacoes/tesauro-brasileiro-de-ciencia-da-informacao</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TermoGeral</IRI>
+        <Literal>Termo Geral (TG)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/TermoGeral</IRI>
+        <Literal>Broader Term (BT)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/TermoGeral</IRI>
+        <Literal>Termo Geral (TG) é o termo que representa um conceito mais amplo, situado em um nível superior de uma relação hierárquica, ao qual estão subordinados termos mais específicos que se referem a classes, membros ou partes desse conceito.
+ANSI/NISO (2010, p.46)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/TermoGeral</IRI>
+        <Literal>Exemplos de Termo Geral (TG) ou Broader Term (BT):
+
+Computadores
+TG equipamentos de computador
+
+Conhecimento tácito
+TG conhecimento nas organizações
+
+Conceitos
+TG conteúdos da informação
+
+O Termo Geral (TG) ou Broader Term (BT) indica uma relação hierárquica de generalização, na qual o termo apresentado possui significado mais amplo, abrangendo os conceitos representados pelos termos mais específicos a ele subordinados.
+
+Tesauro Brasileiro de Ciência da Informação (IBICT) (2014)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TermoNaoAutorizado</IRI>
+        <Literal>A classe TermoNaoAutorizado representa o termo novo que, após avaliação, não foi autorizado no contexto do processo analisado. Essa condição não implica rejeição definitiva do conceito, podendo o termo ser reformulado ou reapresentado em outro momento, conforme critérios e políticas adotadas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TermoNaoAutorizado</IRI>
+        <Literal>Definição elaborada com base na análise das Políticas de Indexação da UFSCar (2021), UNESP (2014) e UFG (2018), que mencionam diferentes agentes atuantes no processo de autorização de termos, sem apresentar uma definição geral da categoria Agente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoNaoAutorizado</IRI>
+        <Literal>https://biblioteca.unesp.br/portal/arquivos/manual-de-politica-de-indexacao.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoNaoAutorizado</IRI>
+        <Literal>https://files.cercomp.ufg.br/weby/up/88/o/Manual_Politica_SIBi_UFG.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoNaoAutorizado</IRI>
+        <Literal>https://www.sibi.ufscar.br/arquivos/manual_indexacao_2021.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/TermoNaoAutorizado</IRI>
+        <Literal>Catalogação por assunto USE Indexação de assuntos, indicando que o termo Catalogação por assunto não é autorizado para indexação e deve ser substituído pelo termo autorizado Indexação de assuntos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/TermoNaoAutorizado</IRI>
+        <Literal>termo não preferido</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TermoNaoAutorizado</IRI>
+        <Literal>Termo não autorizado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TermoNovo</IRI>
+        <Literal>A data de entrada do TermoNovo no processo (temDataDeEntrada) pode coincidir com a data registrada no formulário de solicitação (temDataDeSolicitacao). No entanto, esses elementos foram modelados separadamente por representarem, respectivamente, o ingresso do termo no processo de autorização e o registro documental previsto nos formulários analisados.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TermoNovo</IRI>
+        <Literal>No contexto de bibliotecas universitárias, considera-se termo novo aquele que não existe como termo autorizado nas bases de dados de termos tópicos de referência prioritárias adotadas pela instituição, especialmente na Biblioteca Nacional (BN) e na Library of Congress (LC).  Universidade Federal de São Carlos (UFSCar) (2021),  Universidade Estadual Paulista “Júlio de Mesquita Filho” (UNESP) (2014) e  Universidade Federal de Goiás (UFG) (2018).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoNovo</IRI>
+        <Literal>UNIVERSIDADE ESTADUAL PAULISTA “JÚLIO DE MESQUITA FILHO”. Coordenadoria Geral de Bibliotecas. Manual de política de indexação para as bibliotecas universitárias da Unesp / Mariângela Spotti Lopes Fujita, coordenadora. São Paulo: UNESP, 2014. 34 p.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoNovo</IRI>
+        <Literal>UNIVERSIDADE FEDERAL DE SÃO CARLOS. Câmara de Tratamento Temático da Informação. Manual de indexação. Organização: Câmara Técnica de Tratamento da Informação (CT-TI). Versão 1, nov. 2021. São Carlos: SIBi/UFSCar, 2021.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoNovo</IRI>
+        <Literal>Universidade Federal de Goiás. Sistema de Bibliotecas da UFG. Manual de política de indexação para as bibliotecas da UFG. Elaborado e organizado por Enderson Medeiros e Adriana Ribeiro. Goiânia: Sistema de Bibliotecas da UFG, 2018.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoNovo</IRI>
+        <Literal>https://biblioteca.unesp.br/portal/arquivos/manual-de-politica-de-indexacao.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoNovo</IRI>
+        <Literal>https://files.cercomp.ufg.br/weby/up/88/o/Manual_Politica_SIBi_UFG.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoNovo</IRI>
+        <Literal>https://www.sibi.ufscar.br/arquivos/manual_indexacao_2021.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/TermoNovo</IRI>
+        <Literal>Durante a indexação de um documento, o bibliotecário identifica a necessidade de um termo que não consta na base de termos autorizados da biblioteca nem nas fontes consultadas, como a Biblioteca Nacional e a Library of Congress, sendo então tratado como termo novo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TermoNovo</IRI>
+        <Literal>Termo Novo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TermoRelacionado</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/TermoRelacionado</IRI>
+        <Literal>Related term (RT)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/TermoRelacionado</IRI>
+        <Literal>Termo que está associativamente, mas não hierarquicamente ligado a outro termo em um vocabulário controlado. Indicado como RT em tesauros.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/TermoRelacionado</IRI>
+        <Literal>Exemplos de Termo relacionado:
+
+células
+TR citologia
+
+citologia
+TR células
+
+células e citologia são conceitos semanticamente relacionados, citologia é a área de estudo das células, a relação não é hierárquica (não é BT/NT), não é equivalência (não é sinônimo); por isso, estabelece-se uma relação associativa. ANSI/NISO (2010, p.51)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/TermoRelacionado</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TermoRelacionado</IRI>
+        <Literal>Termo Relacionado (TR)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/TermoRelacionado</IRI>
+        <Literal>A relação associativa (RT) indica um vínculo semântico entre conceitos relacionados, não configurando relação hierárquica (isto é, não corresponde a termo mais amplo ou termo mais específico, BT/NT).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Tesamat</IRI>
+        <Literal>Tesauro em matemática</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Tesamat</IRI>
+        <Literal>GARCÍA-PANDO, Amador Carvajal. TESAMAT: Tesauro de Ciências Matemáticas. Madrid: Biblioteca de la Facultad de Ciencias Matemáticas de la Universidad Complutense de Madrid (UCM), 2003.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Tesamat</IRI>
+        <Literal>https://webs.ucm.es/BUCM/descargas//documento4423.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Tesamat</IRI>
+        <Literal>Tesamat - Tesauro de Matemáticas é um tesauro especializado desenvolvido no contexto de uma biblioteca universitária, destinado à organização e padronização de termos para representação temática da área de Matemática, elaborado a partir da análise de acervos bibliográficos e fundamentado em sistemas de classificação reconhecidos, como a CDU, a AMS e a Classificação da Library of Congress.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Tesamat</IRI>
+        <Literal>Tesamat - Tesauro em Ciências Matemáticas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TesauroBrasileiroEmCienciaDaInformacao</IRI>
+        <Literal>Tesauro na área de Ciência da Informação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesauroBrasileiroEmCienciaDaInformacao</IRI>
+        <Literal>PINHEIRO, Lena Vania Ribeiro; FERREZ, Helena Dodd. Tesauro Brasileiro de Ciência da Informação. Rio de Janeiro; Brasília: Instituto Brasileiro de Informação em Ciência e Tecnologia (Ibict), 2014.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesauroBrasileiroEmCienciaDaInformacao</IRI>
+        <Literal>Tesauro Brasileiro em Ciência da Informação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesauroBrasileiroEmCienciaDaInformacao</IRI>
+        <Literal>https://www.gov.br/ibict/pt-br/central-de-conteudos/publicacoes/TESAUROCOMPLETOFINALCOMCAPA_24102014.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/TesauroBrasileiroEmCienciaDaInformacao</IRI>
+        <Literal>O conjunto de termos candidatos do Tesauro Brasileiro de Ciência da Informação foi definido a partir da análise comparativa de tesauros da área, publicados em diferentes períodos, países e idiomas, utilizados como base para identificação, avaliação e incorporação de descritores representativos do domínio, considerando a evolução temática e tecnológica da Ciência da Informação.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesauroDeGeneroESobreMulheres</IRI>
+        <Literal>BRUSCHINI, Cristina; ARDALLON, Danielle; UNBEHAUM, Sandra G. Tesauro para estudos de gênero e sobre mulheres. São Paulo: Fundação Carlos Chagas, 1998.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesauroDeGeneroESobreMulheres</IRI>
+        <Literal>https://www.fcc.org.br/conteudosespeciais/tesauro/arquivos/TPEDGESM.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/TesauroDeGeneroESobreMulheres</IRI>
+        <Literal>O Tesauro para estudos de gênero e sobre mulheres é um vocabulário controlado com função didática, voltado à difusão de uma linguagem menos sexista e à organização da informação sobre relações de gênero. Sua conceituação foi orientada pela epistemologia e metodologia feminista, buscando estruturar o domínio em categorias e subcampos inter-relacionados que permitam compreender e representar as experiências e condições das mulheres de forma menos discriminatória.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TesauroDeGeneroESobreMulheres</IRI>
+        <Literal>Tesauro para Estudos de Gênero e sobre Mulheres</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TesauroDoIbama</IRI>
+        <Literal>Thesaurus do Meio Ambiente, tesauro na área de meio ambiente do Ibama (Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesauroDoIbama</IRI>
+        <Literal>BRASIL. Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA). Thesaurus do Meio Ambiente. Brasília: IBAMA.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesauroDoIbama</IRI>
+        <Literal>https://www.ibama.gov.br/biblioteca/thesaurus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TesauroDoIbama</IRI>
+        <Literal>Thesaurus do Meio Ambiente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TesauroEric</IRI>
+        <Literal>Base de dados na área de educação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesauroEric</IRI>
+        <Literal>UNITED STATES. Department of Education. Institute of Education Sciences (IES). ERIC: Education Resources Information Center. Washington, DC.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesauroEric</IRI>
+        <Literal>https://eric.ed.gov/?note</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/TesauroEric</IRI>
+        <Literal>ERIC (Education Resources Information Center) vocabulário na área de educação, e um sistema de informação e base de dados bibliográfica especializada na área da Educação, mantido pelo Departamento de Educação dos Estados Unidos, que reúne, organiza, indexa e disponibiliza literatura educacional, incluindo artigos de periódicos, relatórios técnicos, documentos institucionais e outros materiais relevantes para pesquisa, ensino e formulação de políticas públicas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TesauroEric</IRI>
+        <Literal>Eric - Education Resources Information Center</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesauroSobreLiteratura</IRI>
+        <Literal>https://vocabularyserver.com/web/items/show/2012</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/TesauroSobreLiteratura</IRI>
+        <Literal>Tesauro em literatura do IBICT.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Tesauros</IRI>
+        <Literal>CUNHA, Murilo Bastos da; CAVALCANTI, Cordélia Robalinho de Oliveira. Dicionário de
+biblioteconomia e arquivologia. Brasília: Briquet de Lemos, 2008.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Tesauros</IRI>
+        <Literal>http://repositorio.unb.br/handle/10482/34113</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Tesauros</IRI>
+        <Literal>https://vocabularyserver.com/brased/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Tesauros</IRI>
+        <Literal>Tesauros</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Tesauros</IRI>
+        <Literal>Thesaurus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Tesauros</IRI>
+        <Literal>Tesauro / Thesaurus (plural: thesauri)
+Tesauro é um vocabulário controlado e dinâmico, composto por termos normalizados e organizados conceitualmente, ligados por relações semânticas, hierárquicas, associativas e de equivalência, utilizado para traduzir a linguagem natural em linguagem documentária e apoiar os processos de indexação e recuperação da informação. Cunha (2008, p.362)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/Tesauros</IRI>
+        <Literal>Thesaurus Brasileiro da Educação.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/Tesauros</IRI>
+        <Literal>Dicionário de Biblioteconomia e Arquivologia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesaurosDeCienciasDaSaude</IRI>
+        <Literal>DECS Descritores em Ciências da Saúde/MeSH – Medical Subject Headings</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TesaurosDeCienciasDaSaude</IRI>
+        <Literal>https://decs.bvsalud.org/sobre-o-decs/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/TesaurosDeCienciasDaSaude</IRI>
+        <Literal>Descritores em Ciências da Saúde/Medical Subject Headings é um vocabulário estruturado criado pela BIREME em 1986 para servir como linguagem única na indexação de artigos de revistas científicas, livros, anais de congressos, relatórios técnicos, e outros tipos de documentos, assim como para ser usado na pesquisa e recuperação de assuntos da literatura científica nas fontes de informação disponíveis na Biblioteca Virtual em Saúde (BVS) como LILACS, MEDLINE e outras.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TesaurosDeCienciasDaSaude</IRI>
+        <Literal>Tesauros De Ciências da Saúde</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ThesBio</IRI>
+        <Literal>THESBIO: thesaurus em biodiversidade. São Paulo: Rede BHL SciELO.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ThesBio</IRI>
+        <Literal>http://thesaurus.bhlscielo.org/vocab/index.php?tema=87</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ThesBio</IRI>
+        <Literal>Tesauro na área de Ciência Ambientais.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/ThesBio</IRI>
+        <Literal>ThesBio: thesaurus em biodiversidade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Thesagro</IRI>
+        <Literal>MINISTÉRIO da Agricultura e Pecuária. Thesagro. Brasília: Ministério da Agricultura e Pecuária.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Thesagro</IRI>
+        <Literal>http://sistemas.agricultura.gov.br/tematres/vocab/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Thesagro</IRI>
+        <Literal>O Thesaurus Agrícola Nacional (THESAGRO) é um vocabulário controlado especializado na área agrícola, desenvolvido pela Biblioteca Nacional de Agricultura (Binagri), utilizado para a indexação e recuperação da literatura do setor. Caracteriza-se por reunir termos semanticamente relacionados, com relações de equivalência e oposição, visando ao controle terminológico.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Thesagro</IRI>
+        <Literal>Thesaurus Agrícola Nacional (Thesagro)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ThesaurusBrasileiroDeEducacao</IRI>
+        <Literal>BRASIL. Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep). Matriz conceitual atualizada e revista do Thesaurus Brasileiro da Educação (Brased). Brasília, DF: Inep, 2023.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ThesaurusBrasileiroDeEducacao</IRI>
+        <Literal>https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/estudos-educacionais/disponivel-documento-do-thesaurus-brasileiro-da-educacao</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ThesaurusBrasileiroDeEducacao</IRI>
+        <Literal>Thesaurus Brasileiro da Educação (Brased) é um vocabulário controlado da área educacional, desenvolvido e mantido pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep), que reúne termos e conceitos relacionados entre si com base em uma estrutura conceitual previamente estabelecida, com o objetivo de apoiar a indexação, a recuperação da informação e a organização de acervos educacionais.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/ThesaurusBrasileiroDeEducacao</IRI>
+        <Literal>Brased - Thesaurus Brasileiro da Educação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/ThesaurusBrasileiroDeEducacao</IRI>
+        <Literal>Tesauro na área de educação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TransportationResearchThesaurus</IRI>
+        <Literal>Tesauro na área de transportes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TransportationResearchThesaurus</IRI>
+        <Literal>TRANSPORTATION RESEARCH BOARD (TRB). Tesauro de Pesquisa em Transportes (Transportation Research Thesaurus – TRT). Washington, DC: National Academies of Sciences, Engineering, and Medicine, 2025.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TransportationResearchThesaurus</IRI>
+        <Literal>https://trt.trb.org/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/TransportationResearchThesaurus</IRI>
+        <Literal>O Transportation Research Thesaurus (TRT) é um tesauro especializado da área de Transportes, desenvolvido para apoiar a indexação e a recuperação da informação sobre diferentes modais e aspectos do setor, fornecendo uma linguagem controlada comum e consistente. É utilizado em acervos de pesquisa, governamentais e universitários, sendo atualizado periodicamente para refletir a terminologia do domínio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TransportationResearchThesaurus</IRI>
+        <Literal>Transportation Research Thesaurus – TRT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/UnescoThesaurus</IRI>
+        <Literal>UNITED NATIONS EDUCATIONAL, SCIENTIFIC AND CULTURAL ORGANIZATION (UNESCO). UNESCO Thesaurus. Paris.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/UnescoThesaurus</IRI>
+        <Literal>https://vocabularies.unesco.org/browser/thesaurus/en/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/UnescoThesaurus</IRI>
+        <Literal xml:lang="en">O Tesauro da UNESCO é uma lista controlada e estruturada de termos utilizados na análise temática e na recuperação de documentos e publicações nas áreas da educação, cultura, ciências naturais, ciências sociais e humanas, comunicação e informação. Constantemente enriquecida e atualizada, sua terminologia multidisciplinar reflete a evolução dos programas e atividades da UNESCO.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/UnescoThesaurus</IRI>
+        <Literal>UNESCO Thesaurus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/UnescoThesaurus</IRI>
+        <Literal>Tesauros multidisciplinar da UNESCO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/VariantesLexicais</IRI>
+        <Literal>NATIONAL INFORMATION STANDARDS ORGANIZATION (NISO).  Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies: ANSI/NISO Z39.19-2005 (R2010). Baltimore, Maryland, USA: Organização Nacional de Padrões de Informação, 2010.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/VariantesLexicais</IRI>
+        <Literal>https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/VariantesLexicais</IRI>
+        <Literal>Variantes léxicas diferem de sinônimos no sentido de que sinônimos são termos diferentes para o mesmo conceito, enquanto variantes léxicas são diferentes formas de palavras para a mesma expressão. Essas formas podem derivar de variação ortográfica ou gramatical ou de formatos abreviados. ANSI/NISO (2010, p.45)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/VariantesLexicais</IRI>
+        <Literal>Exemplos de variantes léxicas (ordem direta versus ordem invertida, variantes ortográficas, variantes de radicais e  plurais irregulares)
+
+antenas de radar / antenas, radar
+
+Romênia / Rumânia / Roménia
+
+água subterrânea / água-subterrânea / 
+
+águasubterrânea online / on-line
+
+pediatria / pediatria
+ 
+ratos / rato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>/VariantesLexicais</IRI>
+        <Literal>água subterrânea / água-subterrânea / águasubterrânea 
+
+online / on-line
+
+micro-organismo / microorganismo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/VariantesLexicais</IRI>
+        <Literal>Variantes lexicais</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/adequadoPor</IRI>
+        <Literal>Relaciona o Termo com Pendência ao Agente Solicitante responsável por realizar as adequações necessárias.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/eAnalisadoEm</IRI>
+        <Literal>Esta relação indica que o documento é analisado no processo de indexação, do qual são extrapidos termos que representam seu conteúdo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/eEncaminhadoPara</IRI>
+        <Literal>Relação indica que o Formulario de Solicitaçãode Termo novo é encaminhado para agente decisor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/inicia</IRI>
+        <Literal>Relaciona o Agente Solicitante ao Processo de Autorização que ele inicia.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/possuiCampo</IRI>
+        <Literal>Indica os campos que compõem a estrutura do formulário de solicitação de inclusão de termo novo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/registraSolicitacaoDe</IRI>
+        <Literal>O Formulário registra que um termo novo está sendo solicitado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/resultaEm</IRI>
+        <Literal>Esta relação indica que o processo de indexação resulta na seleção e formalização de termos que representam os conceitos tratados no documento. Quando um termo não existe no contexto do vocabulário adotado pela biblioteca universitária, ele é submetido a avaliação e, se aprovado, passa a integrar o vocabulário como termo autorizado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/solicitaAdequacaoDe</IRI>
+        <Literal>Relaciona o Agente Decisor ao Termo com Pendência para o qual foi solicitada a adequação de informações antes da continuidade do processo de autorização.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/solicitaAdequacaoDe</IRI>
+        <Literal>solicitaAdequacaoDe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>/temAssunto</IRI>
+        <Literal>Relação que indica que os assuntos de um documento catalogado são representados por termos, resultantes da formalização dos conceitos identificados na análise do documento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <AbbreviatedIRI>owl:topObjectProperty</AbbreviatedIRI>
+        <Literal>Relação indica  o agente responsável pelo preenchimento do Formulário de Solicitação de Inclusão de Termo Novo no contexto do processo institucional de autorização de termos.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
